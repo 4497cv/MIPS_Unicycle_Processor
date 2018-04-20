@@ -33,6 +33,8 @@ localparam ADD = 4'b0011;
 localparam SUB = 4'b0100;
 localparam LUI = 4'b0101;
 localparam JAL = 4'b0110;
+localparam SLL = 4'b1110;
+localparam SRL = 4'b1100;
 //localparam SSL = 4'b;
 //localparam SRL = 4'b;
 
