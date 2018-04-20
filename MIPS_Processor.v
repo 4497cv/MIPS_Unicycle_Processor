@@ -4,10 +4,12 @@
 	SECOND PRACTICE: UNICYCLE PROCESSOR
 */
 
-module MIPS_PROCESSOR
+module MIPS_Processor
 #(
-	parameter MEMORY_DEPTH = 32
+	parameter MEMORY_DEPTH = 512,
+	parameter DATA_WIDTH = 32
 )
+
 (
 	// Inputs
 	input clk,
@@ -31,7 +33,7 @@ wire [31:0] PCtoBranch_wire;
 wire [31:0] Instruction_wire;
 
 /* CONTROL UNIT WIRES */
-wire RegDst_wire;	
+wire RegDst_wire;
 wire BranchNE_wire; //BRANCH IF NOT EQUAL WIRE(1-BIT)
 wire BranchEQ_wire; //BRANCH IF EQUAL WIRE (1-BIT)
 wire MemRead_wire;
@@ -72,7 +74,7 @@ Control
 ControlUnit
 (
 	.OP(Instruction_wire[31:26]),
-	
+
 	.RegDst(RegDst_wire),
 	.BranchNE(BranchNE_wire),
 	.BranchEQ(BranchEQ_wire),
@@ -91,7 +93,7 @@ PROGRAM_COUNTER
 	.clk(clk),
 	.reset(reset),
 	.NewPC(PC_4_wire),
-	
+
 	.PCValue(PC_wire)
 );
 
@@ -103,7 +105,7 @@ ProgramMemory
 Instruction_Memory
 (
 	.Address(PC_wire),
-	
+
 	.Instruction(Instruction_wire)
 );
 
@@ -114,7 +116,7 @@ PC_Puls_4
 (
 	.Data0(PC_wire),
 	.Data1(4),
-	
+
 	.Result(PC_4_wire)
 );
 
@@ -146,14 +148,14 @@ MUX_RegisterDestinationSelect
 	.Selector(RegDst_wire),
 	.MUX_Data0(Instruction_wire[20:16]),
 	.MUX_Data1(Instruction_wire[15:11]),
-	
+
 	.MUX_Output(WriteRegister_wire)
 );
 
 /*~~~~~~~~~~~SIGN-EXTEND UNIT~~~~~~~~~~*/
 SignExtend
 SignExtender
-(   
+(
 	.DataInput(Instruction_wire[15:0]),
    .SignExtendOutput(InmmediateExtend_wire)
 );
@@ -167,7 +169,7 @@ MUX_ForReadDataAndInmediate
 	.Selector(ALUSrc_wire),
 	.MUX_Data0(ReadData2_wire),
 	.MUX_Data1(InmmediateExtend_wire),
-	
+
 	.MUX_Output(ReadData2OrInmmediate_wire)
 
 );
@@ -178,23 +180,23 @@ ArithmeticLogicUnitControl
 (
 	.ALUOp(ALUOp_wire),
 	.ALUFunction(Instruction_wire[5:0]),
-	
+
 	.ALUOperation(ALUOperation_wire)
 );
 
 ALU
-ArithmeticLogicUnit 
+ArithmeticLogicUnit
 (
 	.ALUOperation(ALUOperation_wire),
 	.A(ReadData1_wire),
 	.B(ReadData2OrInmmediate_wire),
 	.Zero(Zero_wire),
-	
+
 	.ALUResult(ALUResult_wire)
 );
 
 DataMemory
-#(	
+#(
 	.MEMORY_DEPTH(MEMORY_DEPTH)
 )
 DataMemory
@@ -204,7 +206,7 @@ DataMemory
 	.WriteData(ReadData2_wire),
 	.MemWrite(MemWrite_wire),
 	.MemRead(MemRead_wire),
-	.ReadData(ReadDataMemory_wire),
+	.ReadData(ReadDataMemory_wire)
 );
 
 assign ALUResultOut = ALUResult_wire;

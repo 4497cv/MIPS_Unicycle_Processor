@@ -1,4 +1,4 @@
-|MIPS_PROCESSOR
+|MIPS_Processor
 clk => clk.IN3
 reset => reset.IN2
 PortIn[0] => ~NO_FANOUT~
@@ -9,93 +9,93 @@ PortIn[4] => ~NO_FANOUT~
 PortIn[5] => ~NO_FANOUT~
 PortIn[6] => ~NO_FANOUT~
 PortIn[7] => ~NO_FANOUT~
-ALUResultOut[0] << ALUResult_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[1] << ALUResult_wire[1].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[2] << ALUResult_wire[2].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[3] << ALUResult_wire[3].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[4] << ALUResult_wire[4].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[5] << ALUResult_wire[5].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[6] << ALUResult_wire[6].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[7] << ALUResult_wire[7].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[8] << ALUResult_wire[8].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[9] << ALUResult_wire[9].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[10] << ALUResult_wire[10].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[11] << ALUResult_wire[11].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[12] << ALUResult_wire[12].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[13] << ALUResult_wire[13].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[14] << ALUResult_wire[14].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[15] << ALUResult_wire[15].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[16] << ALUResult_wire[16].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[17] << ALUResult_wire[17].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[18] << ALUResult_wire[18].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[19] << ALUResult_wire[19].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[20] << ALUResult_wire[20].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[21] << ALUResult_wire[21].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[22] << ALUResult_wire[22].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[23] << ALUResult_wire[23].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[24] << ALUResult_wire[24].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[25] << ALUResult_wire[25].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[26] << ALUResult_wire[26].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[27] << ALUResult_wire[27].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[28] << ALUResult_wire[28].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[29] << ALUResult_wire[29].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[30] << ALUResult_wire[30].DB_MAX_OUTPUT_PORT_TYPE
-ALUResultOut[31] << ALUResult_wire[31].DB_MAX_OUTPUT_PORT_TYPE
-PortOut[0] << <GND>
-PortOut[1] << <GND>
-PortOut[2] << <GND>
-PortOut[3] << <GND>
-PortOut[4] << <GND>
-PortOut[5] << <GND>
-PortOut[6] << <GND>
-PortOut[7] << <GND>
-PortOut[8] << <GND>
-PortOut[9] << <GND>
-PortOut[10] << <GND>
-PortOut[11] << <GND>
-PortOut[12] << <GND>
-PortOut[13] << <GND>
-PortOut[14] << <GND>
-PortOut[15] << <GND>
-PortOut[16] << <GND>
-PortOut[17] << <GND>
-PortOut[18] << <GND>
-PortOut[19] << <GND>
-PortOut[20] << <GND>
-PortOut[21] << <GND>
-PortOut[22] << <GND>
-PortOut[23] << <GND>
-PortOut[24] << <GND>
-PortOut[25] << <GND>
-PortOut[26] << <GND>
-PortOut[27] << <GND>
-PortOut[28] << <GND>
-PortOut[29] << <GND>
-PortOut[30] << <GND>
-PortOut[31] << <GND>
+ALUResultOut[0] <= ALUResult_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[1] <= ALUResult_wire[1].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[2] <= ALUResult_wire[2].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[3] <= ALUResult_wire[3].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[4] <= ALUResult_wire[4].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[5] <= ALUResult_wire[5].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[6] <= ALUResult_wire[6].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[7] <= ALUResult_wire[7].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[8] <= ALUResult_wire[8].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[9] <= ALUResult_wire[9].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[10] <= ALUResult_wire[10].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[11] <= ALUResult_wire[11].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[12] <= ALUResult_wire[12].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[13] <= ALUResult_wire[13].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[14] <= ALUResult_wire[14].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[15] <= ALUResult_wire[15].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[16] <= ALUResult_wire[16].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[17] <= ALUResult_wire[17].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[18] <= ALUResult_wire[18].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[19] <= ALUResult_wire[19].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[20] <= ALUResult_wire[20].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[21] <= ALUResult_wire[21].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[22] <= ALUResult_wire[22].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[23] <= ALUResult_wire[23].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[24] <= ALUResult_wire[24].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[25] <= ALUResult_wire[25].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[26] <= ALUResult_wire[26].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[27] <= ALUResult_wire[27].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[28] <= ALUResult_wire[28].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[29] <= ALUResult_wire[29].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[30] <= ALUResult_wire[30].DB_MAX_OUTPUT_PORT_TYPE
+ALUResultOut[31] <= ALUResult_wire[31].DB_MAX_OUTPUT_PORT_TYPE
+PortOut[0] <= <GND>
+PortOut[1] <= <GND>
+PortOut[2] <= <GND>
+PortOut[3] <= <GND>
+PortOut[4] <= <GND>
+PortOut[5] <= <GND>
+PortOut[6] <= <GND>
+PortOut[7] <= <GND>
+PortOut[8] <= <GND>
+PortOut[9] <= <GND>
+PortOut[10] <= <GND>
+PortOut[11] <= <GND>
+PortOut[12] <= <GND>
+PortOut[13] <= <GND>
+PortOut[14] <= <GND>
+PortOut[15] <= <GND>
+PortOut[16] <= <GND>
+PortOut[17] <= <GND>
+PortOut[18] <= <GND>
+PortOut[19] <= <GND>
+PortOut[20] <= <GND>
+PortOut[21] <= <GND>
+PortOut[22] <= <GND>
+PortOut[23] <= <GND>
+PortOut[24] <= <GND>
+PortOut[25] <= <GND>
+PortOut[26] <= <GND>
+PortOut[27] <= <GND>
+PortOut[28] <= <GND>
+PortOut[29] <= <GND>
+PortOut[30] <= <GND>
+PortOut[31] <= <GND>
 
 
-|MIPS_PROCESSOR|Control:ControlUnit
-OP[0] => Equal0.IN63
-OP[1] => Equal0.IN62
-OP[2] => Equal0.IN61
-OP[3] => Equal0.IN60
-OP[4] => Equal0.IN59
-OP[5] => Equal0.IN58
-RegDst <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+|MIPS_Processor|Control:ControlUnit
+OP[0] => Decoder0.IN5
+OP[1] => Decoder0.IN4
+OP[2] => Decoder0.IN3
+OP[3] => Decoder0.IN2
+OP[4] => Decoder0.IN1
+OP[5] => Decoder0.IN0
+RegDst <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 BranchEQ <= <GND>
 BranchNE <= <GND>
 MemRead <= <GND>
 MemtoReg <= <GND>
 MemWrite <= <GND>
-ALUSrc <= <GND>
-RegWrite <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[1] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[2] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+ALUSrc <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
+RegWrite <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[0] <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|PC_Register:PROGRAM_COUNTER
+|MIPS_Processor|PC_Register:PROGRAM_COUNTER
 clk => PCValue[0]~reg0.CLK
 clk => PCValue[1]~reg0.CLK
 clk => PCValue[2]~reg0.CLK
@@ -226,7 +226,7 @@ PCValue[30] <= PCValue[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PCValue[31] <= PCValue[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|ProgramMemory:Instruction_Memory
+|MIPS_Processor|ProgramMemory:Instruction_Memory
 Address[0] => ~NO_FANOUT~
 Address[1] => ~NO_FANOUT~
 Address[2] => rom.RADDR
@@ -234,10 +234,10 @@ Address[3] => rom.RADDR1
 Address[4] => rom.RADDR2
 Address[5] => rom.RADDR3
 Address[6] => rom.RADDR4
-Address[7] => ~NO_FANOUT~
-Address[8] => ~NO_FANOUT~
-Address[9] => ~NO_FANOUT~
-Address[10] => ~NO_FANOUT~
+Address[7] => rom.RADDR5
+Address[8] => rom.RADDR6
+Address[9] => rom.RADDR7
+Address[10] => rom.RADDR8
 Address[11] => ~NO_FANOUT~
 Address[12] => ~NO_FANOUT~
 Address[13] => ~NO_FANOUT~
@@ -293,7 +293,7 @@ Instruction[30] <= rom.DATAOUT30
 Instruction[31] <= rom.DATAOUT31
 
 
-|MIPS_PROCESSOR|Adder32bits:PC_Puls_4
+|MIPS_Processor|Adder32bits:PC_Puls_4
 Data0[0] => Add0.IN32
 Data0[1] => Add0.IN31
 Data0[2] => Add0.IN30
@@ -392,7 +392,7 @@ Result[30] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 Result[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File
+|MIPS_Processor|RegisterFile:Register_File
 clk => clk.IN32
 reset => reset.IN32
 RegWrite => comb.IN1
@@ -540,7 +540,7 @@ ReadData2[30] <= MUXRegisterFile:MUXRegister2.MUX_Output
 ReadData2[31] <= MUXRegisterFile:MUXRegister2.MUX_Output
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|DecoderRegisterFile:Decoder
+|MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder
 WriteRegister[0] => Ram0.RADDR
 WriteRegister[1] => Ram0.RADDR1
 WriteRegister[2] => Ram0.RADDR2
@@ -580,7 +580,7 @@ SelectRegister[30] <= Ram0.DATAOUT30
 SelectRegister[31] <= Ram0.DATAOUT31
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_Zero
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_Zero
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -743,7 +743,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_at
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_at
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -906,7 +906,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_v0
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_v0
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1069,7 +1069,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_v1
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_v1
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1232,7 +1232,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_a0
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_a0
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1395,7 +1395,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_a1
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_a1
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1558,7 +1558,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_a2
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_a2
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1721,7 +1721,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_a3
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_a3
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -1884,7 +1884,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t0
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t0
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2047,7 +2047,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t1
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t1
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2210,7 +2210,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t2
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t2
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2373,7 +2373,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t3
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t3
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2536,7 +2536,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t4
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t4
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2699,7 +2699,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t5
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t5
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -2862,7 +2862,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t6
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t6
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3025,7 +3025,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t7
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t7
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3188,7 +3188,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s0
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s0
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3351,7 +3351,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s1
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s1
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3514,7 +3514,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s2
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s2
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3677,7 +3677,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s3
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s3
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -3840,7 +3840,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s4
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s4
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4003,7 +4003,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s5
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s5
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4166,7 +4166,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s6
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s6
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4329,7 +4329,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_s7
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_s7
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4492,7 +4492,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t8
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t8
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4655,7 +4655,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_t9
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_t9
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4818,7 +4818,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_k0
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_k0
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -4981,7 +4981,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_k1
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_k1
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -5144,7 +5144,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_gp
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_gp
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -5307,7 +5307,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_sp
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_sp
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -5470,7 +5470,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_fp
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_fp
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -5633,7 +5633,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|Register:Register_ra
+|MIPS_Processor|RegisterFile:Register_File|Register:Register_ra
 clk => DataOutput[0]~reg0.CLK
 clk => DataOutput[1]~reg0.CLK
 clk => DataOutput[2]~reg0.CLK
@@ -5796,7 +5796,7 @@ DataOutput[30] <= DataOutput[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 DataOutput[31] <= DataOutput[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
+|MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
 Selector[0] => Mux0.IN4
 Selector[0] => Mux1.IN4
 Selector[0] => Mux2.IN4
@@ -7015,7 +7015,7 @@ MUX_Output[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 MUX_Output[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
+|MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
 Selector[0] => Mux0.IN4
 Selector[0] => Mux1.IN4
 Selector[0] => Mux2.IN4
@@ -8234,7 +8234,7 @@ MUX_Output[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 MUX_Output[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|Multiplexer2to1:MUX_RegisterDestinationSelect
+|MIPS_Processor|Multiplexer2to1:MUX_RegisterDestinationSelect
 Selector => MUX_Output.OUTPUTSELECT
 Selector => MUX_Output.OUTPUTSELECT
 Selector => MUX_Output.OUTPUTSELECT
@@ -8257,7 +8257,7 @@ MUX_Output[3] <= MUX_Output.DB_MAX_OUTPUT_PORT_TYPE
 MUX_Output[4] <= MUX_Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|SignExtend:SignExtender
+|MIPS_Processor|SignExtend:SignExtender
 DataInput[0] => SignExtendOutput[0].DATAIN
 DataInput[1] => SignExtendOutput[1].DATAIN
 DataInput[2] => SignExtendOutput[2].DATAIN
@@ -8324,7 +8324,7 @@ SignExtendOutput[30] <= DataInput[15].DB_MAX_OUTPUT_PORT_TYPE
 SignExtendOutput[31] <= DataInput[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|Multiplexer2to1:MUX_ForReadDataAndInmediate
+|MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate
 Selector => MUX_Output.OUTPUTSELECT
 Selector => MUX_Output.OUTPUTSELECT
 Selector => MUX_Output.OUTPUTSELECT
@@ -8455,204 +8455,443 @@ MUX_Output[30] <= MUX_Output.DB_MAX_OUTPUT_PORT_TYPE
 MUX_Output[31] <= MUX_Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|ALUControl:ArithmeticLogicUnitControl
-ALUOp[0] => Equal0.IN11
-ALUOp[0] => Equal1.IN11
-ALUOp[1] => Equal0.IN10
-ALUOp[1] => Equal1.IN10
-ALUOp[2] => Equal0.IN9
-ALUOp[2] => Equal1.IN9
-ALUFunction[0] => Equal0.IN17
-ALUFunction[0] => Equal1.IN17
-ALUFunction[1] => Equal0.IN16
-ALUFunction[1] => Equal1.IN16
-ALUFunction[2] => Equal0.IN15
-ALUFunction[2] => Equal1.IN15
-ALUFunction[3] => Equal0.IN14
-ALUFunction[3] => Equal1.IN14
-ALUFunction[4] => Equal0.IN13
-ALUFunction[4] => Equal1.IN13
-ALUFunction[5] => Equal0.IN12
-ALUFunction[5] => Equal1.IN12
-ALUOperation[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-ALUOperation[1] <= <GND>
+|MIPS_Processor|ALUControl:ArithmeticLogicUnitControl
+ALUOp[0] => Decoder0.IN2
+ALUOp[1] => Decoder0.IN1
+ALUOp[2] => Decoder0.IN0
+ALUFunction[0] => Decoder0.IN8
+ALUFunction[1] => Decoder0.IN7
+ALUFunction[2] => Decoder0.IN6
+ALUFunction[3] => Decoder0.IN5
+ALUFunction[4] => Decoder0.IN4
+ALUFunction[5] => Decoder0.IN3
+ALUOperation[0] <= ALUControlValues.DB_MAX_OUTPUT_PORT_TYPE
+ALUOperation[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 ALUOperation[2] <= <GND>
-ALUOperation[3] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+ALUOperation[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|ALU:ArithmeticLogicUnit
-ALUOperation[0] => Equal0.IN7
-ALUOperation[0] => Equal1.IN7
-ALUOperation[1] => Equal0.IN6
-ALUOperation[1] => Equal1.IN6
-ALUOperation[2] => Equal0.IN5
-ALUOperation[2] => Equal1.IN5
-ALUOperation[3] => Equal0.IN4
-ALUOperation[3] => Equal1.IN4
+|MIPS_Processor|ALU:ArithmeticLogicUnit
+ALUOperation[0] => Mux0.IN19
+ALUOperation[0] => Mux1.IN19
+ALUOperation[0] => Mux2.IN19
+ALUOperation[0] => Mux3.IN19
+ALUOperation[0] => Mux4.IN19
+ALUOperation[0] => Mux5.IN19
+ALUOperation[0] => Mux6.IN19
+ALUOperation[0] => Mux7.IN19
+ALUOperation[0] => Mux8.IN19
+ALUOperation[0] => Mux9.IN19
+ALUOperation[0] => Mux10.IN19
+ALUOperation[0] => Mux11.IN19
+ALUOperation[0] => Mux12.IN19
+ALUOperation[0] => Mux13.IN19
+ALUOperation[0] => Mux14.IN19
+ALUOperation[0] => Mux15.IN19
+ALUOperation[0] => Mux16.IN19
+ALUOperation[0] => Mux17.IN19
+ALUOperation[0] => Mux18.IN19
+ALUOperation[0] => Mux19.IN19
+ALUOperation[0] => Mux20.IN19
+ALUOperation[0] => Mux21.IN19
+ALUOperation[0] => Mux22.IN19
+ALUOperation[0] => Mux23.IN19
+ALUOperation[0] => Mux24.IN19
+ALUOperation[0] => Mux25.IN19
+ALUOperation[0] => Mux26.IN19
+ALUOperation[0] => Mux27.IN19
+ALUOperation[0] => Mux28.IN19
+ALUOperation[0] => Mux29.IN19
+ALUOperation[0] => Mux30.IN19
+ALUOperation[0] => Mux31.IN19
+ALUOperation[1] => Mux0.IN18
+ALUOperation[1] => Mux1.IN18
+ALUOperation[1] => Mux2.IN18
+ALUOperation[1] => Mux3.IN18
+ALUOperation[1] => Mux4.IN18
+ALUOperation[1] => Mux5.IN18
+ALUOperation[1] => Mux6.IN18
+ALUOperation[1] => Mux7.IN18
+ALUOperation[1] => Mux8.IN18
+ALUOperation[1] => Mux9.IN18
+ALUOperation[1] => Mux10.IN18
+ALUOperation[1] => Mux11.IN18
+ALUOperation[1] => Mux12.IN18
+ALUOperation[1] => Mux13.IN18
+ALUOperation[1] => Mux14.IN18
+ALUOperation[1] => Mux15.IN18
+ALUOperation[1] => Mux16.IN18
+ALUOperation[1] => Mux17.IN18
+ALUOperation[1] => Mux18.IN18
+ALUOperation[1] => Mux19.IN18
+ALUOperation[1] => Mux20.IN18
+ALUOperation[1] => Mux21.IN18
+ALUOperation[1] => Mux22.IN18
+ALUOperation[1] => Mux23.IN18
+ALUOperation[1] => Mux24.IN18
+ALUOperation[1] => Mux25.IN18
+ALUOperation[1] => Mux26.IN18
+ALUOperation[1] => Mux27.IN18
+ALUOperation[1] => Mux28.IN18
+ALUOperation[1] => Mux29.IN18
+ALUOperation[1] => Mux30.IN18
+ALUOperation[1] => Mux31.IN18
+ALUOperation[2] => Mux0.IN17
+ALUOperation[2] => Mux1.IN17
+ALUOperation[2] => Mux2.IN17
+ALUOperation[2] => Mux3.IN17
+ALUOperation[2] => Mux4.IN17
+ALUOperation[2] => Mux5.IN17
+ALUOperation[2] => Mux6.IN17
+ALUOperation[2] => Mux7.IN17
+ALUOperation[2] => Mux8.IN17
+ALUOperation[2] => Mux9.IN17
+ALUOperation[2] => Mux10.IN17
+ALUOperation[2] => Mux11.IN17
+ALUOperation[2] => Mux12.IN17
+ALUOperation[2] => Mux13.IN17
+ALUOperation[2] => Mux14.IN17
+ALUOperation[2] => Mux15.IN17
+ALUOperation[2] => Mux16.IN17
+ALUOperation[2] => Mux17.IN17
+ALUOperation[2] => Mux18.IN17
+ALUOperation[2] => Mux19.IN17
+ALUOperation[2] => Mux20.IN17
+ALUOperation[2] => Mux21.IN17
+ALUOperation[2] => Mux22.IN17
+ALUOperation[2] => Mux23.IN17
+ALUOperation[2] => Mux24.IN17
+ALUOperation[2] => Mux25.IN17
+ALUOperation[2] => Mux26.IN17
+ALUOperation[2] => Mux27.IN17
+ALUOperation[2] => Mux28.IN17
+ALUOperation[2] => Mux29.IN17
+ALUOperation[2] => Mux30.IN17
+ALUOperation[2] => Mux31.IN17
+ALUOperation[3] => Mux0.IN16
+ALUOperation[3] => Mux1.IN16
+ALUOperation[3] => Mux2.IN16
+ALUOperation[3] => Mux3.IN16
+ALUOperation[3] => Mux4.IN16
+ALUOperation[3] => Mux5.IN16
+ALUOperation[3] => Mux6.IN16
+ALUOperation[3] => Mux7.IN16
+ALUOperation[3] => Mux8.IN16
+ALUOperation[3] => Mux9.IN16
+ALUOperation[3] => Mux10.IN16
+ALUOperation[3] => Mux11.IN16
+ALUOperation[3] => Mux12.IN16
+ALUOperation[3] => Mux13.IN16
+ALUOperation[3] => Mux14.IN16
+ALUOperation[3] => Mux15.IN16
+ALUOperation[3] => Mux16.IN16
+ALUOperation[3] => Mux17.IN16
+ALUOperation[3] => Mux18.IN16
+ALUOperation[3] => Mux19.IN16
+ALUOperation[3] => Mux20.IN16
+ALUOperation[3] => Mux21.IN16
+ALUOperation[3] => Mux22.IN16
+ALUOperation[3] => Mux23.IN16
+ALUOperation[3] => Mux24.IN16
+ALUOperation[3] => Mux25.IN16
+ALUOperation[3] => Mux26.IN16
+ALUOperation[3] => Mux27.IN16
+ALUOperation[3] => Mux28.IN16
+ALUOperation[3] => Mux29.IN16
+ALUOperation[3] => Mux30.IN16
+ALUOperation[3] => Mux31.IN16
 A[0] => Add0.IN32
 A[0] => Add1.IN64
+A[0] => ALUResult.IN0
+A[0] => ALUResult.IN0
 A[1] => Add0.IN31
 A[1] => Add1.IN63
+A[1] => ALUResult.IN0
+A[1] => ALUResult.IN0
 A[2] => Add0.IN30
 A[2] => Add1.IN62
+A[2] => ALUResult.IN0
+A[2] => ALUResult.IN0
 A[3] => Add0.IN29
 A[3] => Add1.IN61
+A[3] => ALUResult.IN0
+A[3] => ALUResult.IN0
 A[4] => Add0.IN28
 A[4] => Add1.IN60
+A[4] => ALUResult.IN0
+A[4] => ALUResult.IN0
 A[5] => Add0.IN27
 A[5] => Add1.IN59
+A[5] => ALUResult.IN0
+A[5] => ALUResult.IN0
 A[6] => Add0.IN26
 A[6] => Add1.IN58
+A[6] => ALUResult.IN0
+A[6] => ALUResult.IN0
 A[7] => Add0.IN25
 A[7] => Add1.IN57
+A[7] => ALUResult.IN0
+A[7] => ALUResult.IN0
 A[8] => Add0.IN24
 A[8] => Add1.IN56
+A[8] => ALUResult.IN0
+A[8] => ALUResult.IN0
 A[9] => Add0.IN23
 A[9] => Add1.IN55
+A[9] => ALUResult.IN0
+A[9] => ALUResult.IN0
 A[10] => Add0.IN22
 A[10] => Add1.IN54
+A[10] => ALUResult.IN0
+A[10] => ALUResult.IN0
 A[11] => Add0.IN21
 A[11] => Add1.IN53
+A[11] => ALUResult.IN0
+A[11] => ALUResult.IN0
 A[12] => Add0.IN20
 A[12] => Add1.IN52
+A[12] => ALUResult.IN0
+A[12] => ALUResult.IN0
 A[13] => Add0.IN19
 A[13] => Add1.IN51
+A[13] => ALUResult.IN0
+A[13] => ALUResult.IN0
 A[14] => Add0.IN18
 A[14] => Add1.IN50
+A[14] => ALUResult.IN0
+A[14] => ALUResult.IN0
 A[15] => Add0.IN17
 A[15] => Add1.IN49
+A[15] => ALUResult.IN0
+A[15] => ALUResult.IN0
 A[16] => Add0.IN16
 A[16] => Add1.IN48
+A[16] => ALUResult.IN0
+A[16] => ALUResult.IN0
 A[17] => Add0.IN15
 A[17] => Add1.IN47
+A[17] => ALUResult.IN0
+A[17] => ALUResult.IN0
 A[18] => Add0.IN14
 A[18] => Add1.IN46
+A[18] => ALUResult.IN0
+A[18] => ALUResult.IN0
 A[19] => Add0.IN13
 A[19] => Add1.IN45
+A[19] => ALUResult.IN0
+A[19] => ALUResult.IN0
 A[20] => Add0.IN12
 A[20] => Add1.IN44
+A[20] => ALUResult.IN0
+A[20] => ALUResult.IN0
 A[21] => Add0.IN11
 A[21] => Add1.IN43
+A[21] => ALUResult.IN0
+A[21] => ALUResult.IN0
 A[22] => Add0.IN10
 A[22] => Add1.IN42
+A[22] => ALUResult.IN0
+A[22] => ALUResult.IN0
 A[23] => Add0.IN9
 A[23] => Add1.IN41
+A[23] => ALUResult.IN0
+A[23] => ALUResult.IN0
 A[24] => Add0.IN8
 A[24] => Add1.IN40
+A[24] => ALUResult.IN0
+A[24] => ALUResult.IN0
 A[25] => Add0.IN7
 A[25] => Add1.IN39
+A[25] => ALUResult.IN0
+A[25] => ALUResult.IN0
 A[26] => Add0.IN6
 A[26] => Add1.IN38
+A[26] => ALUResult.IN0
+A[26] => ALUResult.IN0
 A[27] => Add0.IN5
 A[27] => Add1.IN37
+A[27] => ALUResult.IN0
+A[27] => ALUResult.IN0
 A[28] => Add0.IN4
 A[28] => Add1.IN36
+A[28] => ALUResult.IN0
+A[28] => ALUResult.IN0
 A[29] => Add0.IN3
 A[29] => Add1.IN35
+A[29] => ALUResult.IN0
+A[29] => ALUResult.IN0
 A[30] => Add0.IN2
 A[30] => Add1.IN34
+A[30] => ALUResult.IN0
+A[30] => ALUResult.IN0
 A[31] => Add0.IN1
 A[31] => Add1.IN33
+A[31] => ALUResult.IN0
+A[31] => ALUResult.IN0
 B[0] => Add0.IN64
+B[0] => ALUResult.IN1
+B[0] => ALUResult.IN1
 B[0] => Add1.IN32
 B[1] => Add0.IN63
+B[1] => ALUResult.IN1
+B[1] => ALUResult.IN1
 B[1] => Add1.IN31
 B[2] => Add0.IN62
+B[2] => ALUResult.IN1
+B[2] => ALUResult.IN1
 B[2] => Add1.IN30
 B[3] => Add0.IN61
+B[3] => ALUResult.IN1
+B[3] => ALUResult.IN1
 B[3] => Add1.IN29
 B[4] => Add0.IN60
+B[4] => ALUResult.IN1
+B[4] => ALUResult.IN1
 B[4] => Add1.IN28
 B[5] => Add0.IN59
+B[5] => ALUResult.IN1
+B[5] => ALUResult.IN1
 B[5] => Add1.IN27
 B[6] => Add0.IN58
+B[6] => ALUResult.IN1
+B[6] => ALUResult.IN1
 B[6] => Add1.IN26
 B[7] => Add0.IN57
+B[7] => ALUResult.IN1
+B[7] => ALUResult.IN1
 B[7] => Add1.IN25
 B[8] => Add0.IN56
+B[8] => ALUResult.IN1
+B[8] => ALUResult.IN1
 B[8] => Add1.IN24
 B[9] => Add0.IN55
+B[9] => ALUResult.IN1
+B[9] => ALUResult.IN1
 B[9] => Add1.IN23
 B[10] => Add0.IN54
+B[10] => ALUResult.IN1
+B[10] => ALUResult.IN1
 B[10] => Add1.IN22
 B[11] => Add0.IN53
+B[11] => ALUResult.IN1
+B[11] => ALUResult.IN1
 B[11] => Add1.IN21
 B[12] => Add0.IN52
+B[12] => ALUResult.IN1
+B[12] => ALUResult.IN1
 B[12] => Add1.IN20
 B[13] => Add0.IN51
+B[13] => ALUResult.IN1
+B[13] => ALUResult.IN1
 B[13] => Add1.IN19
 B[14] => Add0.IN50
+B[14] => ALUResult.IN1
+B[14] => ALUResult.IN1
 B[14] => Add1.IN18
 B[15] => Add0.IN49
+B[15] => ALUResult.IN1
+B[15] => ALUResult.IN1
 B[15] => Add1.IN17
 B[16] => Add0.IN48
+B[16] => ALUResult.IN1
+B[16] => ALUResult.IN1
 B[16] => Add1.IN16
 B[17] => Add0.IN47
+B[17] => ALUResult.IN1
+B[17] => ALUResult.IN1
 B[17] => Add1.IN15
 B[18] => Add0.IN46
+B[18] => ALUResult.IN1
+B[18] => ALUResult.IN1
 B[18] => Add1.IN14
 B[19] => Add0.IN45
+B[19] => ALUResult.IN1
+B[19] => ALUResult.IN1
 B[19] => Add1.IN13
 B[20] => Add0.IN44
+B[20] => ALUResult.IN1
+B[20] => ALUResult.IN1
 B[20] => Add1.IN12
 B[21] => Add0.IN43
+B[21] => ALUResult.IN1
+B[21] => ALUResult.IN1
 B[21] => Add1.IN11
 B[22] => Add0.IN42
+B[22] => ALUResult.IN1
+B[22] => ALUResult.IN1
 B[22] => Add1.IN10
 B[23] => Add0.IN41
+B[23] => ALUResult.IN1
+B[23] => ALUResult.IN1
 B[23] => Add1.IN9
 B[24] => Add0.IN40
+B[24] => ALUResult.IN1
+B[24] => ALUResult.IN1
 B[24] => Add1.IN8
 B[25] => Add0.IN39
+B[25] => ALUResult.IN1
+B[25] => ALUResult.IN1
 B[25] => Add1.IN7
 B[26] => Add0.IN38
+B[26] => ALUResult.IN1
+B[26] => ALUResult.IN1
 B[26] => Add1.IN6
 B[27] => Add0.IN37
+B[27] => ALUResult.IN1
+B[27] => ALUResult.IN1
 B[27] => Add1.IN5
 B[28] => Add0.IN36
+B[28] => ALUResult.IN1
+B[28] => ALUResult.IN1
 B[28] => Add1.IN4
 B[29] => Add0.IN35
+B[29] => ALUResult.IN1
+B[29] => ALUResult.IN1
 B[29] => Add1.IN3
 B[30] => Add0.IN34
+B[30] => ALUResult.IN1
+B[30] => ALUResult.IN1
 B[30] => Add1.IN2
 B[31] => Add0.IN33
+B[31] => ALUResult.IN1
+B[31] => ALUResult.IN1
 B[31] => Add1.IN1
-Zero <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[0] <= Selector31.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[1] <= Selector30.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[2] <= Selector29.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[3] <= Selector28.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[4] <= Selector27.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[5] <= Selector26.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[6] <= Selector25.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[7] <= Selector24.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[8] <= Selector23.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[9] <= Selector22.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[10] <= Selector21.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[11] <= Selector20.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[12] <= Selector19.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[13] <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[14] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[15] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[16] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[17] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[18] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[19] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[20] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[21] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[22] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[23] <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[24] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[25] <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[26] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[27] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[28] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[29] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[30] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
-ALUResult[31] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+Zero <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[0] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[1] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[2] <= Mux29.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[3] <= Mux28.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[4] <= Mux27.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[5] <= Mux26.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[6] <= Mux25.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[7] <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[8] <= Mux23.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[9] <= Mux22.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[10] <= Mux21.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[11] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[12] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[13] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[14] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[15] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[16] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[17] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[18] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[19] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[20] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[21] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[22] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[23] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[24] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[25] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[26] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[27] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[28] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[29] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ALUResult[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|MIPS_PROCESSOR|DataMemory:DataMemory
+|MIPS_Processor|DataMemory:DataMemory
 WriteData[0] => ram.data_a[0].DATAIN
 WriteData[0] => ram.DATAIN
 WriteData[1] => ram.data_a[1].DATAIN
@@ -8684,9 +8923,15 @@ Address[3] => ram.RADDR3
 Address[4] => ram.waddr_a[4].DATAIN
 Address[4] => ram.WADDR4
 Address[4] => ram.RADDR4
-Address[5] => ~NO_FANOUT~
-Address[6] => ~NO_FANOUT~
-Address[7] => ~NO_FANOUT~
+Address[5] => ram.waddr_a[5].DATAIN
+Address[5] => ram.WADDR5
+Address[5] => ram.RADDR5
+Address[6] => ram.waddr_a[6].DATAIN
+Address[6] => ram.WADDR6
+Address[6] => ram.RADDR6
+Address[7] => ram.waddr_a[7].DATAIN
+Address[7] => ram.WADDR7
+Address[7] => ram.RADDR7
 MemWrite => ram.we_a.DATAIN
 MemWrite => ram.WE
 MemRead => ReadData.IN0
@@ -8698,6 +8943,10 @@ MemRead => ReadData.IN0
 MemRead => ReadData.IN0
 MemRead => ReadData.IN0
 clk => ram.we_a.CLK
+clk => ram.waddr_a[8].CLK
+clk => ram.waddr_a[7].CLK
+clk => ram.waddr_a[6].CLK
+clk => ram.waddr_a[5].CLK
 clk => ram.waddr_a[4].CLK
 clk => ram.waddr_a[3].CLK
 clk => ram.waddr_a[2].CLK

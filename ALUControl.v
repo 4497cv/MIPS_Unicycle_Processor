@@ -36,8 +36,11 @@ assign Selector = {ALUOp, ALUFunction};
 always@(Selector)begin
 	casex(Selector)
 		R_Type_AND:    ALUControlValues = 4'b0000;
-		R_Type_OR: 		ALUControlValues = 4'b0001;
-
+		R_Type_OR:     ALUControlValues = 4'b0001;
+		R_Type_NOR:    ALUControlValues = 4'b0010;
+		R_Type_ADD:    ALUControlValues = 4'b0011;
+		I_Type_ADDI:   ALUControlValues = 4'b0011;
+		I_Type_ORI:    ALUControlValues = 4'b0001;
 		
 		default: ALUControlValues = 4'b1001;
 	endcase

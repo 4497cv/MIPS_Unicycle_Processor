@@ -2,7 +2,144 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "ALUResultOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ALUResultOut[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
