@@ -1,29 +1,8 @@
-/******************************************************************
-* Description
-*	This is the top-level of a MIPS processor that can execute the next set of instructions:
-*		add
-*		addi
-*		sub
-*		ori
-*		or
-*		bne
-*		beq
-*		and
-*		nor
-* This processor is written Verilog-HDL. Also, it is synthesizable into hardware.
-* Parameter MEMORY_DEPTH configures the program memory to allocate the program to
-* be execute. If the size of the program changes, thus, MEMORY_DEPTH must change.
-* This processor was made for computer organization class at ITESO.
-* Version:
-*	1.0
-* Author:
-*	Dr. José Luis Pizano Escalante
-* email:
-*	luispizano@iteso.mx
-* Date:
-*	12/06/2016
-******************************************************************/
-
+/*
+	CODED BY CESAR VILLARREAL & GUILLERMO ROLDAN
+	COMPUTER ARCHITECTURE
+	SECOND PRACTICE: UNICYCLE PROCESSOR
+*/
 
 module MIPS_Processor
 #(
@@ -39,44 +18,54 @@ module MIPS_Processor
 	output [31:0] ALUResultOut,
 	output [31:0] PortOut
 );
-//******************************************************************/
-//******************************************************************/
+
 assign  PortOut = 0;
 
-//******************************************************************/
-//******************************************************************/
-// Data types to connect modules
-wire BranchNE_wire;
-wire BranchEQ_wire;
-wire RegDst_wire;
+//////////WIRE-DECLARATION///////////
+/* PROGRAM COUNTER WIRES */
+wire [31:0] MUX_PC_wire;
+wire [31:0] PC_wire;
+wire [31:0] PC_4_wire;
+wire [31:0] PCtoBranch_wire;
+
+/* INSTRUCTION MEMORY WIRES*/
+wire [31:0] Instruction_wire;
+
+/* CONTROL UNIT WIRES */
+wire RegDst_wire;	
+wire BranchNE_wire; //BRANCH IF NOT EQUAL WIRE(1-BIT)
+wire BranchEQ_wire; //BRANCH IF EQUAL WIRE (1-BIT)
+wire MemRead_wire;
+wire MemtoReg_wire;
+wire [2:0] ALUOp_wire;
+wire MemWrite_wire;
+wire ALUSrc_wire
+wire RegWrite_wire;
+
+/*ARITHMETIC LOGIC UNIT WIRES */
+wire [3:0] ALUOperation_wire;
+wire [31:0] ALUResult_wire;
+wire Zero_wire;
+
+/* REGISTER FILE WIRES */
+wire [4:0] WriteRegister_wire;
+wire [31:0] ReadData1_wire;
+wire [31:0] ReadData2_wire;
+
+/* SIGN-EXTEND WIRES */
+wire [31:0] InmmediateExtend_wire;
+wire [31:0] ReadData2OrInmmediate_wire;
+wire [31:0] InmmediateExtendAnded_wire;
+
 wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
-wire ALUSrc_wire;
-wire RegWrite_wire;
-wire Zero_wire;
-wire [2:0] ALUOp_wire;
-wire [3:0] ALUOperation_wire;
-wire [4:0] WriteRegister_wire;
 
-
-wire [31:0] Instruction_wire;
-wire [31:0] ReadData1_wire;
-wire [31:0] ReadData2_wire;
-wire [31:0] InmmediateExtend_wire;
-wire [31:0] ReadData2OrInmmediate_wire;
-wire [31:0] ALUResult_wire;
-wire [31:0] PC_4_wire;
-wire [31:0] InmmediateExtendAnded_wire;
-wire [31:0] PCtoBranch_wire;
 integer ALUStatus;
+//////////////////////////////////////
+////////////////FETCH/////////////////
 
-
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
+/*~~~~~~~~~~~CONTROL UNIT~~~~~~~~~~*/
 Control
 ControlUnit
 (
@@ -85,30 +74,33 @@ ControlUnit
 	.BranchNE(BranchNE_wire),
 	.BranchEQ(BranchEQ_wire),
 	.ALUOp(ALUOp_wire),
-	.ALUSrc(ALUSrc_wire)
+	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire)
 );
 
+/*~~~~~~~~~~~PROGRAM COUNTER~~~~~~~~~~*/
+PC_REGISTER
+PROGRAM_COUNTER
+(
+	.clk(clk),
+	.reset(reset),
+	.NewPC(PC_4_wire),
+	.PCValue(PC_wire)
+)
 
-
-
-
-
-
-
-
-
-
+/*~~~~~~~~~~~INSTRUCTION MEMORY~~~~~~~~~~*/
 ProgramMemory
 #(
 	.MEMORY_DEPTH(MEMORY_DEPTH)
 )
-ROMProgramMemory
+Instruction_Memory
 (
 	.Address(PC_wire),
 	.Instruction(Instruction_wire)
 );
 
+
+/*~~~~~~~~~~~32-BIT ADDER~~~~~~~~~~*/
 Adder32bits
 PC_Puls_4
 (
@@ -118,17 +110,13 @@ PC_Puls_4
 	.Result(PC_4_wire)
 );
 
-
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
-//******************************************************************/
+///////////////////DECODE////////////////////
+/*~~~~~~~~~~~DATA SELECTORS (2 TO 1)~~~~~~~~~~*/
 Multiplexer2to1
 #(
 	.NBits(5)
 )
-MUX_ForRTypeAndIType
+MUX_RegisterDestinationSelect
 (
 	.Selector(RegDst_wire),
 	.MUX_Data0(Instruction_wire[20:16]),
@@ -138,8 +126,7 @@ MUX_ForRTypeAndIType
 
 );
 
-
-
+/*~~~~~~~~~~~REGISTER FILE~~~~~~~~~~*/
 RegisterFile
 Register_File
 (
@@ -155,14 +142,13 @@ Register_File
 
 );
 
+/*~~~~~~~~~~~SIGN-EXTEND UNIT~~~~~~~~~~*/
 SignExtend
-SignExtendForConstants
+SignExtender
 (   
 	.DataInput(Instruction_wire[15:0]),
    .SignExtendOutput(InmmediateExtend_wire)
 );
-
-
 
 Multiplexer2to1
 #(
@@ -178,7 +164,7 @@ MUX_ForReadDataAndInmediate
 
 );
 
-
+/*~~~~~~~~~~~ALU~~~~~~~~~~*/
 ALUControl
 ArithmeticLogicUnitControl
 (
@@ -187,8 +173,6 @@ ArithmeticLogicUnitControl
 	.ALUOperation(ALUOperation_wire)
 
 );
-
-
 
 ALU
 ArithmeticLogicUnit 
@@ -200,8 +184,20 @@ ArithmeticLogicUnit
 	.ALUResult(ALUResult_wire)
 );
 
+DataMemory
+#(	.MEMORY_DEPTH(MEMORY_DEPTH),
+	.DATA_WIDTH(DATA_WIDTH)
+)
+DataMemory
+(
+	.Address(ALUResult_wire),
+	.WriteData(),
+	.MemWrite(),
+	.MemRead(),
+	.ReadData(),
+	.clk(clk)
+);
+
 assign ALUResultOut = ALUResult_wire;
 
-
 endmodule
-
