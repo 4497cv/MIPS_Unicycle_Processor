@@ -31,7 +31,7 @@ assign RealAddress = {2'b0,Address[(DATA_WIDTH-1):2]};
 
 	initial
 	begin
-		$readmemh("/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/text.dat", rom);
+		$readmemh("C:/P2_UNICYCLEPROCESSOR/text.dat", rom);
 	end
 
 	always @ (RealAddress)
