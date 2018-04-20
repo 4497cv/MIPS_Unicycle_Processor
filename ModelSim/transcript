@@ -1,0 +1,24 @@
+# Loading project simulation_1
+# Compile of Adder32bits.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful.
+# Compile of ANDGate.v was successful.
+# Compile of Control.v was successful.
+# Compile of DataMemory.v was successful.
+# Compile of DecoderRegisterFile.v was successful.
+# Compile of Definitions.v was successful.
+# Compile of MIPS_Processor.v failed with 1 errors.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer2to1.v was successful.
+# Compile of MUXRegisterFile.v was successful.
+# Compile of PC_Register.v was successful.
+# Compile of ProgramMemory.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of SignExtend.v was successful.
+# 18 compiles, 1 failed with 1 error.
+# Error opening /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/(vlog-13069) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# Path name '/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/(vlog-13069) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v' doesn't exist.
+# Error opening /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/(vlog-13069) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# Path name '/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/(vlog-13069) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v' doesn't exist.

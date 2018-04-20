@@ -25,18 +25,16 @@ module Control
 	output RegWrite,
 	output [2:0]ALUOp
 );
+
 localparam R_Type = 0;
 localparam I_Type_ADDI = 6'h8;
 localparam I_Type_ORI = 6'h0d;
-
 
 reg [10:0] ControlValues;
 
 always@(OP) begin
 	casex(OP)
 		R_Type:       ControlValues= 11'b1_001_00_00_111;
-
-		
 		
 		default:
 			ControlValues= 10'b0000000000;

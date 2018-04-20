@@ -1,0 +1,114 @@
+/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module MIPS_Processor_TB
+
+Top level modules:
+	MIPS_Processor_TB
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module PC_Register
+
+Top level modules:
+	PC_Register
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Adder32bits
+
+Top level modules:
+	Adder32bits
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v {0 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module MIPS_PROCESSOR
+** Error: (vlog-13069) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(208): near ")": syntax error, unexpected ')', expecting .* or '.'.
+
+} {4.0 5.0} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module SignExtend
+
+Top level modules:
+	SignExtend
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ShiftLeft2
+
+Top level modules:
+	ShiftLeft2
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ALUControl
+
+Top level modules:
+	ALUControl
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DataMemory
+
+Top level modules:
+	DataMemory
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DecoderRegisterFile
+
+Top level modules:
+	DecoderRegisterFile
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ANDGate
+
+Top level modules:
+	ANDGate
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module MUXRegisterFile
+
+Top level modules:
+	MUXRegisterFile
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Multiplexer2to1
+
+Top level modules:
+	Multiplexer2to1
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Control
+
+Top level modules:
+	Control
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}

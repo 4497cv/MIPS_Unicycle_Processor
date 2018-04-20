@@ -4,11 +4,10 @@
 	SECOND PRACTICE: UNICYCLE PROCESSOR
 */
 
-module MIPS_Processor
+module MIPS_PROCESSOR
 #(
 	parameter MEMORY_DEPTH = 32
 )
-
 (
 	// Inputs
 	input clk,
@@ -39,7 +38,7 @@ wire MemRead_wire;
 wire MemtoReg_wire;
 wire [2:0] ALUOp_wire;
 wire MemWrite_wire;
-wire ALUSrc_wire
+wire ALUSrc_wire;
 wire RegWrite_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
@@ -57,6 +56,9 @@ wire [31:0] InmmediateExtend_wire;
 wire [31:0] ReadData2OrInmmediate_wire;
 wire [31:0] InmmediateExtendAnded_wire;
 
+/*DATA MEMORY*/
+wire [31:0] ReadDataMemory_wire;
+
 wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
@@ -70,23 +72,28 @@ Control
 ControlUnit
 (
 	.OP(Instruction_wire[31:26]),
+	
 	.RegDst(RegDst_wire),
 	.BranchNE(BranchNE_wire),
 	.BranchEQ(BranchEQ_wire),
+	.MemRead(MemRead_wire),
+	.MemtoReg(MemtoReg_wire),
 	.ALUOp(ALUOp_wire),
+	.MemWrite(MemWrite_wire),
 	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire)
 );
 
 /*~~~~~~~~~~~PROGRAM COUNTER~~~~~~~~~~*/
-PC_REGISTER
+PC_Register
 PROGRAM_COUNTER
 (
 	.clk(clk),
 	.reset(reset),
 	.NewPC(PC_4_wire),
+	
 	.PCValue(PC_wire)
-)
+);
 
 /*~~~~~~~~~~~INSTRUCTION MEMORY~~~~~~~~~~*/
 ProgramMemory
@@ -96,6 +103,7 @@ ProgramMemory
 Instruction_Memory
 (
 	.Address(PC_wire),
+	
 	.Instruction(Instruction_wire)
 );
 
@@ -110,22 +118,8 @@ PC_Puls_4
 	.Result(PC_4_wire)
 );
 
+/////////////////////////////////////////////
 ///////////////////DECODE////////////////////
-/*~~~~~~~~~~~DATA SELECTORS (2 TO 1)~~~~~~~~~~*/
-Multiplexer2to1
-#(
-	.NBits(5)
-)
-MUX_RegisterDestinationSelect
-(
-	.Selector(RegDst_wire),
-	.MUX_Data0(Instruction_wire[20:16]),
-	.MUX_Data1(Instruction_wire[15:11]),
-	
-	.MUX_Output(WriteRegister_wire)
-
-);
-
 /*~~~~~~~~~~~REGISTER FILE~~~~~~~~~~*/
 RegisterFile
 Register_File
@@ -140,6 +134,20 @@ Register_File
 	.ReadData1(ReadData1_wire),
 	.ReadData2(ReadData2_wire)
 
+);
+
+/*~~~~~~~~~~~DATA SELECTOR (RT[0], RD[1])~~~~~~~~~~*/
+Multiplexer2to1
+#(
+	.NBits(5)
+)
+MUX_RegisterDestinationSelect
+(
+	.Selector(RegDst_wire),
+	.MUX_Data0(Instruction_wire[20:16]),
+	.MUX_Data1(Instruction_wire[15:11]),
+	
+	.MUX_Output(WriteRegister_wire)
 );
 
 /*~~~~~~~~~~~SIGN-EXTEND UNIT~~~~~~~~~~*/
@@ -170,8 +178,8 @@ ArithmeticLogicUnitControl
 (
 	.ALUOp(ALUOp_wire),
 	.ALUFunction(Instruction_wire[5:0]),
+	
 	.ALUOperation(ALUOperation_wire)
-
 );
 
 ALU
@@ -181,21 +189,22 @@ ArithmeticLogicUnit
 	.A(ReadData1_wire),
 	.B(ReadData2OrInmmediate_wire),
 	.Zero(Zero_wire),
+	
 	.ALUResult(ALUResult_wire)
 );
 
 DataMemory
-#(	.MEMORY_DEPTH(MEMORY_DEPTH),
-	.DATA_WIDTH(DATA_WIDTH)
+#(	
+	.MEMORY_DEPTH(MEMORY_DEPTH)
 )
 DataMemory
 (
+	.clk(clk),
 	.Address(ALUResult_wire),
-	.WriteData(),
-	.MemWrite(),
-	.MemRead(),
-	.ReadData(),
-	.clk(clk)
+	.WriteData(ReadData2_wire),
+	.MemWrite(MemWrite_wire),
+	.MemRead(MemRead_wire),
+	.ReadData(ReadDataMemory_wire),
 );
 
 assign ALUResultOut = ALUResult_wire;

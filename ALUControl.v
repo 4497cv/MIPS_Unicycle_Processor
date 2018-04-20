@@ -16,6 +16,7 @@ module ALUControl
 (
 	input [2:0] ALUOp,
 	input [5:0] ALUFunction,
+	
 	output [3:0] ALUOperation
 
 );

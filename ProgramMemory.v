@@ -15,7 +15,7 @@
 module ProgramMemory
 #
 (
-	parameter MEMORY_DEPTH=32,
+	parameter MEMORY_DEPTH=256,
 	parameter DATA_WIDTH=32
 )
 (
@@ -31,7 +31,7 @@ assign RealAddress = {2'b0,Address[(DATA_WIDTH-1):2]};
 
 	initial
 	begin
-		$readmemh("C:/MIPSProjects/MIPSProcessor_ver1/Sources/text.dat", rom);
+		$readmemh("/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/text.dat", rom);
 	end
 
 	always @ (RealAddress)

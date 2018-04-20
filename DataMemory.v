@@ -13,7 +13,6 @@
 module DataMemory 
 #(	parameter DATA_WIDTH=8,
 	parameter MEMORY_DEPTH = 1024
-
 )
 (
 	input [DATA_WIDTH-1:0] WriteData,

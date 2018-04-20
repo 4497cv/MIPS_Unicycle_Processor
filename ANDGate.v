@@ -14,6 +14,7 @@ module ANDGate
 (
 	input A,
 	input B,
+	
 	output reg C
 );
 
