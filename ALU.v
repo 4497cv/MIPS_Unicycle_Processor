@@ -50,7 +50,7 @@ localparam JAL = 4'b0110;
 		  NOR:
 				ALUResult = ~(A | B);
 			LUI:
-				ALUResult = {B[15:0], 16'b0}
+				ALUResult = {B[15:0], 16'b0};
 			JAL:
 				ALUResult = B;
 			/*

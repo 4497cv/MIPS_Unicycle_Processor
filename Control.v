@@ -14,7 +14,7 @@ module Control
 	output [2:0]ALUOp
 );
 
-reg [10:0] ControlValues; //CONTROL VALUES OUTPUT
+reg [11:0] ControlValues; //CONTROL VALUES OUTPUT
 
 /*OP CODES: Instruction[31:26]*/
 
@@ -24,7 +24,7 @@ localparam I_Type_ORI  = 6'h0d;
 localparam I_Type_LUI  = 6'h0f;
 localparam I_Type_ANDI = 6'h0c;
 localparam I_Type_LW   = 6'h23;
-localparam I_Type_SW	 = 6'h2b;
+localparam I_Type_SW	  = 6'h2b;
 localparam I_Type_BEQ  = 6'h04;
 localparam I_Type_BNE  = 6'h05;
 localparam I_Type_J    = 6'h02;
@@ -43,17 +43,17 @@ localparam I_Type_JAL  = 6'h03;
 
 always@(OP) begin
 	casex(OP)
-		R_Type:       ControlValues= 12'b1_001_00_000_111; //functioning
-		I_Type_ADDI:  ControlValues= 12'b0_101_00_000_000;
-		I_Type_ORI:   ControlValues= 12'b0_101_00_000_010;
-		I_Type_ANDI:  ControlValues= 12'b0_000_00_000_011;
-		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101;
-		I_Type_LW	    ControValues = 12'b0_011_10_100_000; //modified
-		I_Type_SW:	  ControlValues= 12'b0_000_00_000_000;
-		I_Type_BEQ:	  ControlValues= 12'bx_100_x0_000_000; //modified sub or add???
-		I_Type_BNE:	  ControlValues= 12'bx_010_x0_000_000;
-		I_Type_J: 	  ControlValues= 12'b0_000_00_001_110;
-		I_Type_JAL:	  ControlValues= 12'b0_000_00_001_100;
+		R_Type:       ControlValues= 12'b1_001_00_000_111; //RegDst,RegWrite; FunctField(111)
+		I_Type_ADDI:  ControlValues= 12'b0_101_00_000_000; //
+		I_Type_ORI:   ControlValues= 12'b0_101_00_000_010; //
+		I_Type_ANDI:  ControlValues= 12'b0_000_00_000_011; //
+		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101; //
+		I_Type_LW:	  ControlValues= 12'b0_111_10_000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
+		I_Type_SW:	  ControlValues= 12'bx_000_00_000_000; //AlUSrc,MemWrite;ADD(000)
+		I_Type_BEQ:	  ControlValues= 12'bx_100_x0_000_000; //BranchEQ;SUB(001)
+		I_Type_BNE:	  ControlValues= 12'bx_010_x0_000_000; //BranchNE;SUB(001)
+		I_Type_J: 	  ControlValues= 12'b0_000_00_001_110; //
+		I_Type_JAL:	  ControlValues= 12'b0_000_00_001_100; //
 
 		default:
 			ControlValues= 11'b0_000_00_00_000;

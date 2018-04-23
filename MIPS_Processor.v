@@ -10,9 +10,8 @@
 	MODIFY CONTROL VARIABLES, AND VERIFY BRANCH AND LOAD INSTRUCTIONS
 
 */
-
-
 module MIPS_Processor
+#(
 	parameter MEMORY_DEPTH = 512,
 	parameter DATA_WIDTH = 32
 )
@@ -50,6 +49,7 @@ wire MemWrite_wire;
 wire ALUSrc_wire;
 wire RegWrite_wire;
 wire Jump_wire;
+wire BranchTest_1_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
 wire [3:0] ALUOperation_wire;
@@ -139,7 +139,7 @@ PC_offset_adder
 	.Data1(slltoalu_wire),
 
 	.Result(offsetAdder_wire)
-)
+);
 /////////////////////////////////////////////
 ///////////////////DECODE////////////////////
 /*~~~~~~~~~~~REGISTER FILE~~~~~~~~~~*/
@@ -187,20 +187,29 @@ MUX_Offset
 
 /*~~~~~~~~~~~~~~~~~~~~~~~AND GATE~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 ///PENDING...
-ANDGATE
+ANDGate
 BRANCHEQ_AND_ZERO
 (
-	.A(BranchEQ_wire)
-	.B(Zero_wire)
+	.A(BranchEQ_wire),
+	.B(Zero_wire),
 
-	.C(PcSrc_wire)
+	.C(BranchTest_1_wire)
 );
 
-ANDGATE
+ANDGate
 BRANCHNE_AND_ZERO
 (
-	.A(Zero_wire)
-	.B(BranchNE_wire)
+	.A(BranchNE_wire),
+	.B(~(Zero_wire)),
+
+	.C(BranchTest_2_wire)
+);
+
+ORGate
+BranchEqOrBranchNE
+(
+	.A(BranchTest_1_wire),
+	.B(BranchTest_2_wire),
 
 	.C(PcSrc_wire)
 );
@@ -235,7 +244,7 @@ ShiftLeft
 (
 	.DataInput(InmmediateExtend_wire), //32-bit input:sign extender-output
 	.DataOutput(slltoalu_wire) //32-bit output
-)
+);
 
 /*~~~~~~~~~~~ALU~~~~~~~~~~*/
 ALUControl
