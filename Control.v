@@ -43,8 +43,8 @@ localparam I_Type_JAL  = 6'h03;
 
 always@(OP) begin
 	casex(OP)
-		R_Type:       ControlValues= 12'b1_001_00_000_111; //RegDst,RegWrite; FunctField(111)
-		I_Type_ADDI:  ControlValues= 12'b0_101_00_000_000; //
+		R_Type:       ControlValues= 12'b1_001_00_000_111; //RegDst:Rt,RegWrite; FunctField(111)
+		I_Type_ADDI:  ControlValues= 12'b0_101_00_000_000; //RegDst:RS,ALUSRC; ADD(000)
 		I_Type_ORI:   ControlValues= 12'b0_101_00_000_010; //
 		I_Type_ANDI:  ControlValues= 12'b0_000_00_000_011; //
 		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101; //

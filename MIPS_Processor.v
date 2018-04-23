@@ -94,7 +94,7 @@ ControlUnit
 	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire),
 	.Jump(Jump_wire),
-	.ALUOp(ALUOp_wire),
+	.ALUOp(ALUOp_wire)
 );
 
 /*~~~~~~~~~~~PROGRAM COUNTER~~~~~~~~~~*/
@@ -174,7 +174,7 @@ MUX_RegisterDestinationSelect
 /*~~~~~~~~~~~~~~~~~OFFSET DATA SELECTOR~~~~~~~~~~~~~~~~~~~~~*/
 Multiplexer2to1
 #(
-	.NBits(5)
+	.NBits(32)
 )
 MUX_Offset
 (
@@ -219,7 +219,7 @@ SignExtend
 SignExtender
 (
 	.DataInput(Instruction_wire[15:0]),
-   .SignExtendOutput(InmmediateExtend_wire)
+        .SignExtendOutput(InmmediateExtend_wire)
 );
 
 

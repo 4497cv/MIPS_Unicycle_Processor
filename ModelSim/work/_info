@@ -9,376 +9,398 @@ z2
 cModel Technology
 d/home/c
 vAdder32bits
-!s110 1524236341
+Z0 !s110 1524510656
 !i10b 1
 !s100 ]H0^NRAm[`J07LMS2@]Pb2
 IG_baQBdB[Fm_mKT>[?JVF1
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 d/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim
 w1419780579
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v
-Z2 L0 13
-Z3 OV;L;10.5c;63
+Z3 L0 13
+Z4 OV;L;10.5c;63
 r1
 !s85 0
 31
-Z4 !s108 1524236341.000000
+Z5 !s108 1524510656.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 n@adder32bits
 vALU
-Z7 !s110 1524236342
-!i10b 1
-!s100 bH>CGB7Ge7I_ef2X;_go00
-I]BiaFYGm^3]640:SjQSA^2
 R0
+!i10b 1
+!s100 c<51>edM7fk9Oi03`ZFZd1
+IA5zQci:[6omYhogo4^R_]0
 R1
-w1524236282
+R2
+w1524507957
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 L0 20
-R3
+R4
 r1
 !s85 0
 31
-R4
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v|
 !i113 1
-R5
 R6
+R7
 n@a@l@u
 vALUControl
-R7
-!i10b 1
-!s100 LNn:@I9G=XK=7UN?K<4?m3
-Ij0]He^E:EV5MGmXaooGn@0
 R0
+!i10b 1
+!s100 ;>BdQi;8^3UGgEefUdCSX1
+I5biFd5WSPig7O7dA=Ob:11
 R1
-w1524235869
+R2
+w1524506120
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 Z8 L0 15
-R3
+R4
 r1
 !s85 0
 31
-Z9 !s108 1524236342.000000
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v|
 !i113 1
-R5
 R6
+R7
 n@a@l@u@control
 vANDGate
-R7
+R0
 !i10b 1
 !s100 YL4^U;I;8mAcNT8FQj__82
 I6f8k40V_Xa2U94>eYeMYT0
-R0
 R1
+R2
 w1524232021
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
-R2
 R3
+R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v|
 !i113 1
-R5
 R6
+R7
 n@a@n@d@gate
 vControl
-R7
-!i10b 1
-!s100 @;nPUN3[aUch8^97S[?TD0
-I93`>RWhH[WKjm=9hWjH]E1
 R0
+!i10b 1
+!s100 D^Di3GVAdB7W`3GFcXmI@1
+IZObQ@z[zPjcO^WM8nJ`H20
 R1
-w1524236164
+R2
+w1524507790
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
-Z10 L0 14
-R3
+L0 1
+R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v|
 !i113 1
-R5
 R6
+R7
 n@control
 vDataMemory
-R7
+R0
 !i10b 1
 !s100 Ynj0bz`?]Dl`cIn2X9BWG2
 IH2M<Q[_CI?cj7B7EI`jlN2
-R0
 R1
+R2
 w1524231462
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-R2
 R3
+R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v|
 !i113 1
-R5
 R6
+R7
 n@data@memory
 vDecoderRegisterFile
-R7
+Z9 !s110 1524510657
 !i10b 1
 !s100 WiBBY1;C0OC:8`V5m[Rn51
 Io^kFLkS2FL97>GSO=`bEh1
-R0
 R1
+R2
 w1419780743
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
-Z11 L0 12
-R3
+Z10 L0 12
+R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v|
 !i113 1
-R5
 R6
+R7
 n@decoder@register@file
 vMIPS_Processor
-R7
+R9
 !i10b 1
-!s100 gHl<G6:S70?7[Z2kQ[h121
-IWN1zQ_jWjbRWl;CKjY[Q]3
-R0
+!s100 UMd?W>N83_1@0;[VTCQ_;1
+IjeDAadXJz:O`Qk>3RX]aN2
 R1
-w1524234938
+R2
+w1524510527
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
-L0 7
 R3
+R4
 r1
 !s85 0
 31
-R9
+Z11 !s108 1524510657.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v|
 !i113 1
-R5
 R6
+R7
 n@m@i@p@s_@processor
 vMIPS_Processor_TB
-R7
+R9
 !i10b 1
 !s100 93:RClE5YGZRK?HHmQNoS0
 Ibhd6?1AiFS>0=]QPZ2AmO3
-R0
 R1
+R2
 w1465771738
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v
 R8
-R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v|
 !i113 1
-R5
 R6
+R7
 n@m@i@p@s_@processor_@t@b
 vMultiplexer2to1
-R7
+R9
 !i10b 1
 !s100 F48Y>?kNP3VGSJ<6PZ3Z<0
 I7l8T:93d]XG>LH1T7oN5e3
-R0
 R1
+R2
 w1419780640
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v
-R2
 R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v|
 !i113 1
-R5
 R6
+R7
 n@multiplexer2to1
 vMUXRegisterFile
-R7
+R9
 !i10b 1
 !s100 <^j`[[]Fjj[]CWW`3JSFT0
 I9zgQ4`<iFHYKUiaz>n6BQ1
-R0
 R1
+R2
 w1392863324
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v
 L0 2
-R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v|
 !i113 1
-R5
 R6
-n@m@u@x@register@file
-vPC_Register
 R7
+n@m@u@x@register@file
+vORGate
+R9
+!i10b 1
+!s100 HIOV@TS6_iFo<CbNDz5?i1
+Ikl85ZMzI4Cb6Q1BZd1hK12
+R1
+R2
+w1524505629
+8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v
+F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v|
+!i113 1
+R6
+R7
+n@o@r@gate
+vPC_Register
+R9
 !i10b 1
 !s100 ^`<5Mf<4UR5fFO@ICc@Mk2
 IlS<][`LI<b_WLYS?PB7e<1
-R0
 R1
+R2
 w1524229064
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v
 R8
-R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/PC_Register.v|
 !i113 1
-R5
 R6
+R7
 n@p@c_@register
 vProgramMemory
-R7
+R9
 !i10b 1
 !s100 M9>CBbi]Gk?P=WQSHc_QE3
 IHN;TS1_JKcmY1?Z]F_iLi3
-R0
 R1
+R2
 w1524233333
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
 R8
-R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v|
 !i113 1
-R5
 R6
+R7
 n@program@memory
 vRegister
-R7
+R9
 !i10b 1
 !s100 egCIUc]UZ1M2z58M]>B@S3
 I81Ml4NDhj9`o?TBAW`foH0
-R0
 R1
+R2
 w1419780761
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v
-R11
-R3
+R10
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v|
 !i113 1
-R5
 R6
+R7
 n@register
 vRegisterFile
-Z12 !s110 1524236343
+R9
 !i10b 1
 !s100 iRCaBoP=AVEo`Pldi`c<00
 IM3:5kETGnG=;i1:b;NJUl0
-R0
 R1
+R2
 w1475516362
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v
 R8
-R3
+R4
 r1
 !s85 0
 31
-R9
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v|
 !i113 1
-R5
 R6
+R7
 n@register@file
 vShiftLeft2
-R12
+R9
 !i10b 1
 !s100 Hi:hlBR22G;<919E5iIcC3
 I@cDA4dA9k@1;lJKQE9LFB1
-R0
 R1
+R2
 w1419780687
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
-R11
-R3
+R10
+R4
 r1
 !s85 0
 31
-Z13 !s108 1524236343.000000
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v|
 !i113 1
-R5
 R6
+R7
 n@shift@left2
 vSignExtend
-R12
+R9
 !i10b 1
 !s100 I1D7fe4B<UD12_E`@TC:T3
 IV;hS`X;1fQ:5ZW5[75O9G2
-R0
 R1
+R2
 w1419780694
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v
-R10
-R3
+L0 14
+R4
 r1
 !s85 0
 31
-R13
+R11
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v|
 !i113 1
-R5
 R6
+R7
 n@sign@extend

@@ -26,13 +26,13 @@ module ALU
 	output reg [31:0]ALUResult
 );
 
-localparam AND = 4'b0000;
-localparam OR  = 4'b0001;
-localparam NOR = 4'b0010;
-localparam ADD = 4'b0011;
-localparam SUB = 4'b0100;
-localparam LUI = 4'b0101;
-localparam JAL = 4'b0110;
+localparam AND = 3'b000;
+localparam OR  = 3'b001;
+localparam NOR = 3'b010;
+localparam ADD = 3'b011;
+localparam SUB = 3'b100;
+localparam LUI = 3'b101;
+localparam JAL = 3'b110;
 //localparam SSL = 4'b;
 //localparam SRL = 4'b;
 
