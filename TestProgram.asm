@@ -20,7 +20,7 @@
 	addi $t5,$t4,1
 	
 	# 2's complement of register $t0
-	nor $at,$t0,$t0
+	nor $at,$t0,$t0 ??
 	addi $t0,$at,1
 	
 	# Move register $t0 to $t6
@@ -29,4 +29,7 @@
 	# Swap registers $t1 and $t2
 	addi $t0,$zero,5
 	addi  $t8,$zero, 10
-	
+
+
+#works: addi, add,and, or
+#does not: nor

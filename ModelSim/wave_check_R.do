@@ -24,7 +24,7 @@ add wave -noupdate -label {SGN OUTPUT} -radix binary /MIPS_Processor_TB/DUV/Sign
 add wave -noupdate -label {SLL INPUT} -radix binary /MIPS_Processor_TB/DUV/ShiftLeft/DataInput
 add wave -noupdate -label {SLL OUTPUT} -radix binary /MIPS_Processor_TB/DUV/ShiftLeft/DataOutput
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+WaveRestoreCursors {{Cursor 1} {23 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -40,4 +40,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {8 ps}
+WaveRestoreZoom {51 ps} {59 ps}

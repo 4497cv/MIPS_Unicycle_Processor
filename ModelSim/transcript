@@ -51,3 +51,6 @@ vsim work.MIPS_Processor_TB
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
 run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
+# End time: 14:25:53 on Apr 23,2018, Elapsed time: 0:14:48
+# Errors: 0, Warnings: 5
