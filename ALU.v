@@ -32,9 +32,8 @@ localparam NOR = 3'b010;
 localparam ADD = 3'b011;
 localparam SUB = 3'b100;
 localparam LUI = 3'b101;
-localparam JAL = 3'b110;
-//localparam SSL = 4'b;
-//localparam SRL = 4'b;
+localparam SSL = 3'b110;
+localparam SRL = 3'b001;
 
    always @ (A or B or ALUOperation)
      begin
@@ -51,14 +50,13 @@ localparam JAL = 3'b110;
 				ALUResult = ~(A | B);
 			LUI:
 				ALUResult = {B[15:0], 16'b0};
-			JAL:
-				ALUResult = B;
-			/*
+
+		/*	SRL:
+				ALUResult = (B >> shamt);
 			SLL:
-				ALUResult =	B<<shamt;
-			SRL:
-				ALUResult = B>>shamt;
-			*/
+				ALUResult =	(B << shamt);
+		*/
+
 		default:
 			ALUResult= 0;
 		endcase // case(control)

@@ -52,6 +52,7 @@ wire ZeroImm_wire;
 wire LUI_wire;
 wire BranchTest_1_wire;
 wire BranchTest_2_wire;
+wire JumpAndLink_wire;
 wire [2:0] ALUOp_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
@@ -72,6 +73,7 @@ wire [31:0] InmmediateExtendAnded_wire;
 wire [31:0] offsetAdder_wire;
 wire [31:0] ZeroImmALU_wire;
 wire [31:0] ImmLUIext_wire;
+wire [31:0] JumpAddressPC_wire;
 /*DATA MEMORY*/
 wire [31:0] RDM_wire;
 wire [31:0] Writeback_wire;
@@ -81,6 +83,10 @@ wire ORForBranch;
 wire [31:0] MemtoLUI_wire;
 wire [31:0] ZeroExtend_wire;
 integer ALUStatus;
+wire [27:0] JumpAddress_wire;
+wire [31:0] JumpAddr_wire;
+wire [31:0] LuitoJal_wire;
+
 //////////////////////////////////////
 ////////////////FETCH/////////////////
 
@@ -99,6 +105,7 @@ ControlUnit
 	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire),
 	.Jump(Jump_wire),
+	.JumpAndLink(JumpAndLink_wire),
 	.ZeroImm(ZeroImm_wire),
 	.LUI(LUI_wire),
 	.ALUOp(ALUOp_wire)
@@ -110,7 +117,7 @@ PROGRAM_COUNTER
 (
 	.clk(clk),
 	.reset(reset),
-	.NewPC(PCMUX_OFFSET_wire),
+	.NewPC(JumpAddressPC_wire),
 
 	.PCValue(PC_wire)
 );
@@ -147,6 +154,50 @@ PC_offset_adder
 
 	.Result(offsetAdder_wire)
 );
+/*~~~~~~~~~~~JUMP~~~~~~~~~~*/
+ShiftLeft2
+ShiftLeftADDR
+(
+	.DataInput(Instruction_wire[25:0]), //32-bit input:sign extender-output
+
+	.DataOutput(JumpAddress_wire) //32-bit output
+);
+
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_JUMPADDRESS
+(
+	.Selector(Jump_wire),
+	.MUX_Data0(PCMUX_OFFSET_wire),
+	.MUX_Data1({JumpAddress_wire,PC_4_wire[31:28]}),
+
+	.MUX_Output(JumpAddressPC_wire)
+);
+
+/*~~~~~~~~~~~~~JUMP AND LINK~~~~~~~~~~~~~~ */
+JumpAddrOP
+JALMODULE
+(
+	.PC_4(PC_4_wire[31:28]),
+	.address(Instruction_wire[25:0]),
+	.JumpAddr(JumpAddr_wire)
+);
+
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_JUMPANDLINK
+(
+	.Selector(JumpAndLink_wire),
+	.MUX_Data0(LuitoJal_wire),
+	.MUX_Data1(JumpAddr_wire),
+
+	.MUX_Output(Writeback_wire)
+);
+
 /////////////////////////////////////////////
 ///////////////////DECODE////////////////////
 /*~~~~~~~~~~~REGISTER FILE~~~~~~~~~~*/
@@ -285,7 +336,7 @@ MUX_LUI
 	.MUX_Data0(MemtoLUI_wire),
 	.MUX_Data1(ImmLUIext_wire),
 
-	.MUX_Output(Writeback_wire)
+	.MUX_Output(LuitoJal_wire)
 );
 
 /*~~~~~~~~~SHIFT LEFT MODULE~~~~~~~~~~*/
