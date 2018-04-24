@@ -17,10 +17,11 @@
 # Compile of RegisterFile.v was successful.
 # Compile of ShiftLeft2.v was successful.
 # Compile of SignExtend.v was successful.
-# 18 compiles, 0 failed with no errors.
+# Compile of ORGate.v was successful.
+# 19 compiles, 0 failed with no errors.
 vsim work.MIPS_Processor_TB
 # vsim work.MIPS_Processor_TB 
-# Start time: 09:59:13 on Apr 20,2018
+# Start time: 20:26:13 on Apr 23,2018
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -32,46 +33,24 @@ vsim work.MIPS_Processor_TB
 # Loading work.Register
 # Loading work.MUXRegisterFile
 # Loading work.Multiplexer2to1
+# Loading work.ANDGate
+# Loading work.ORGate
 # Loading work.SignExtend
+# Loading work.ShiftLeft2
 # Loading work.ALUControl
 # Loading work.ALU
 # Loading work.DataMemory
 # ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'WriteData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'ReadData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
 run
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ALUSrc
+run
+add wave -position 24  sim:/MIPS_Processor_TB/DUV/BranchEQ_wire
 restart -f
 # ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'WriteData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'ReadData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 run
-# WARNING: No extended dataflow license exists
-add wave -position end  sim:/MIPS_Processor_TB/DUV/DataMemory/ReadData
-add wave -position end  sim:/MIPS_Processor_TB/DUV/MemtoReg_wire
-restart -f
-# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
-# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'WriteData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(202): [PCDPC] - Port size (8) does not match connection size (32) for port 'ReadData'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(21).
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-run
-# End time: 10:21:15 on Apr 20,2018, Elapsed time: 0:22:02
-# Errors: 0, Warnings: 16
+# End time: 20:30:56 on Apr 23,2018, Elapsed time: 0:04:43
+# Errors: 0, Warnings: 4

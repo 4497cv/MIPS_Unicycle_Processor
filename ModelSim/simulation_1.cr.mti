@@ -47,12 +47,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	SignExtend
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module ShiftLeft2
+-- Compiling module ORGate
 
 Top level modules:
-	ShiftLeft2
+	ORGate
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -60,6 +60,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 
 Top level modules:
 	ALUControl
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ShiftLeft2
+
+Top level modules:
+	ShiftLeft2
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -75,9 +82,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	DecoderRegisterFile
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ANDGate
@@ -85,19 +89,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	ANDGate
 
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module MUXRegisterFile
 
 Top level modules:
 	MUXRegisterFile
-
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module Control
-
-Top level modules:
-	Control
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -112,6 +112,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 
 Top level modules:
 	Multiplexer2to1
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Control
+
+Top level modules:
+	Control
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017

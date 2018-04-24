@@ -7,18 +7,14 @@
 /*
 	TO-DO:
 
-	> MODIFY CONTROL, ALU CONTROL FOR A.L.U. ADEQUATE OPERATION
-	> IMPLEMENT THE NECESSARY HARDWARE FOR JUMP OPERATION
-	> SHAMT?
+	MODIFY CONTROL VARIABLES, AND VERIFY BRANCH AND LOAD INSTRUCTIONS
 
 */
-
 module MIPS_Processor
 #(
 	parameter MEMORY_DEPTH = 512,
 	parameter DATA_WIDTH = 32
 )
-
 (
 	// Inputs
 	input clk,
@@ -37,6 +33,7 @@ wire [31:0] MUX_PC_wire;
 wire [31:0] PC_wire;
 wire [31:0] PC_4_wire;
 wire [31:0] PCtoBranch_wire;
+wire [31:0] PCMUX_OFFSET_wire;
 
 /* INSTRUCTION MEMORY WIRES*/
 wire [31:0] Instruction_wire;
@@ -47,14 +44,18 @@ wire BranchNE_wire; //BRANCH IF NOT EQUAL WIRE(1-BIT)
 wire BranchEQ_wire; //BRANCH IF EQUAL WIRE (1-BIT)
 wire MemRead_wire;
 wire MemtoReg_wire;
-wire [2:0] ALUOp_wire;
 wire MemWrite_wire;
 wire ALUSrc_wire;
 wire RegWrite_wire;
+wire Jump_wire;
+wire BranchTest_1_wire;
+wire BranchTest_2_wire;
+wire [2:0] ALUOp_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
-wire [3:0] ALUOperation_wire;
+wire [2:0] ALUOperation_wire;
 wire [31:0] ALUResult_wire;
+wire [31:0] slltoalu_wire;
 wire Zero_wire;
 
 /* REGISTER FILE WIRES */
@@ -66,10 +67,11 @@ wire [31:0] ReadData2_wire;
 wire [31:0] InmmediateExtend_wire;
 wire [31:0] ReadData2OrInmmediate_wire;
 wire [31:0] InmmediateExtendAnded_wire;
+wire [31:0] offsetAdder_wire;
 
 /*DATA MEMORY*/
-wire [31:0] ReadDataMemory_wire;
-
+wire [31:0] RDM_wire;
+wire [31:0] Writeback_wire;
 wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
@@ -89,10 +91,11 @@ ControlUnit
 	.BranchEQ(BranchEQ_wire),
 	.MemRead(MemRead_wire),
 	.MemtoReg(MemtoReg_wire),
-	.ALUOp(ALUOp_wire),
 	.MemWrite(MemWrite_wire),
 	.ALUSrc(ALUSrc_wire),
-	.RegWrite(RegWrite_wire)
+	.RegWrite(RegWrite_wire),
+	.Jump(Jump_wire),
+	.ALUOp(ALUOp_wire)
 );
 
 /*~~~~~~~~~~~PROGRAM COUNTER~~~~~~~~~~*/
@@ -101,7 +104,7 @@ PROGRAM_COUNTER
 (
 	.clk(clk),
 	.reset(reset),
-	.NewPC(PC_4_wire),
+	.NewPC(PCMUX_OFFSET_wire),
 
 	.PCValue(PC_wire)
 );
@@ -119,9 +122,9 @@ Instruction_Memory
 );
 
 
-/*~~~~~~~~~~~32-BIT ADDER~~~~~~~~~~*/
+/*~~~~~~~~~~~32-BIT ADDERS~~~~~~~~~~*/
 Adder32bits
-PC_Puls_4
+PC_4_adder
 (
 	.Data0(PC_wire),
 	.Data1(4),
@@ -129,6 +132,15 @@ PC_Puls_4
 	.Result(PC_4_wire)
 );
 
+
+Adder32bits
+PC_offset_adder
+(
+	.Data0(PC_4_wire),
+	.Data1(slltoalu_wire),
+
+	.Result(offsetAdder_wire)
+);
 /////////////////////////////////////////////
 ///////////////////DECODE////////////////////
 /*~~~~~~~~~~~REGISTER FILE~~~~~~~~~~*/
@@ -141,13 +153,12 @@ Register_File
 	.WriteRegister(WriteRegister_wire),
 	.ReadRegister1(Instruction_wire[25:21]),
 	.ReadRegister2(Instruction_wire[20:16]),
-	.WriteData(ALUResult_wire),
+	.WriteData(Writeback_wire),
 	.ReadData1(ReadData1_wire),
 	.ReadData2(ReadData2_wire)
-
 );
 
-/*~~~~~~~~~~~DATA SELECTOR (RT[0], RD[1])~~~~~~~~~~*/
+/*~~~~~~~~~~~REG SOURCE DATA SELECTOR (RT[0], RD[1])~~~~~~~~*/
 Multiplexer2to1
 #(
 	.NBits(5)
@@ -161,7 +172,50 @@ MUX_RegisterDestinationSelect
 	.MUX_Output(WriteRegister_wire)
 );
 
-/*~~~~~~~~~~~SIGN-EXTEND UNIT~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~OFFSET DATA SELECTOR~~~~~~~~~~~~~~~~~~~~~*/
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_Offset
+(
+	.Selector(PcSrc_wire),
+	.MUX_Data0(PC_4_wire),
+	.MUX_Data1(offsetAdder_wire),
+
+	.MUX_Output(PCMUX_OFFSET_wire)
+);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~AND GATE~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+///PENDING...
+ANDGate
+BRANCHEQ_AND_ZERO
+(
+	.A(BranchEQ_wire),
+	.B(Zero_wire),
+
+	.C(BranchTest_1_wire)
+);
+
+ANDGate
+BRANCHNE_AND_ZERO
+(
+	.A(BranchNE_wire),
+	.B(~(Zero_wire)),
+
+	.C(BranchTest_2_wire)
+);
+
+ORGate
+BranchEqOrBranchNE
+(
+	.A(BranchTest_1_wire),
+	.B(BranchTest_2_wire),
+
+	.C(PcSrc_wire)
+);
+
+/*~~~~~~~~~~~~~~~~~~SIGN-EXTEND UNIT~~~~~~~~~~~~~~~~~~~~~~~*/
 SignExtend
 SignExtender
 (
@@ -169,6 +223,8 @@ SignExtender
    .SignExtendOutput(InmmediateExtend_wire)
 );
 
+
+/*~~~~~~INMMEDIATE EXTEND/READDATA2 DATA SELECTOR~~~~~~~~~~*/
 Multiplexer2to1
 #(
 	.NBits(32)
@@ -180,7 +236,15 @@ MUX_ForReadDataAndInmediate
 	.MUX_Data1(InmmediateExtend_wire),
 
 	.MUX_Output(ReadData2OrInmmediate_wire)
+);
 
+
+/*~~~~~~~~~SHIFT LEFT MODULE~~~~~~~~~~*/
+ShiftLeft2
+ShiftLeft
+(
+	.DataInput(InmmediateExtend_wire), //32-bit input:sign extender-output
+	.DataOutput(slltoalu_wire) //32-bit output
 );
 
 /*~~~~~~~~~~~ALU~~~~~~~~~~*/
@@ -204,10 +268,9 @@ ArithmeticLogicUnit
 	.ALUResult(ALUResult_wire)
 );
 
+////////////WRITE BACK////////////////
+/*~~~~~~~~~~DATA MEMORY~~~~~~~~~~*/
 DataMemory
-#(
-	.MEMORY_DEPTH(MEMORY_DEPTH)
-)
 DataMemory
 (
 	.clk(clk),
@@ -215,8 +278,22 @@ DataMemory
 	.WriteData(ReadData2_wire),
 	.MemWrite(MemWrite_wire),
 	.MemRead(MemRead_wire),
-	.ReadData(ReadDataMemory_wire)
+	.ReadData(RDM_wire)
 );
+
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_MemtoReg
+(
+	.Selector(MemtoReg_wire),
+	.MUX_Data0(ALUResult_wire),
+	.MUX_Data1(RDM_wire),
+
+	.MUX_Output(Writeback_wire)
+);
+
 
 assign ALUResultOut = ALUResult_wire;
 
