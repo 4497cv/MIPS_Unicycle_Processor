@@ -8,8 +8,8 @@
 	TO-DO:
 
 	MODIFY CONTROL VARIABLES, AND VERIFY BRANCH AND LOAD INSTRUCTIONS
-
 */
+
 module MIPS_Processor
 #(
 	parameter MEMORY_DEPTH = 512,
@@ -48,6 +48,7 @@ wire MemWrite_wire;
 wire ALUSrc_wire;
 wire RegWrite_wire;
 wire Jump_wire;
+wire ZeroImm_wire;
 wire BranchTest_1_wire;
 wire BranchTest_2_wire;
 wire [2:0] ALUOp_wire;
@@ -68,6 +69,7 @@ wire [31:0] InmmediateExtend_wire;
 wire [31:0] ReadData2OrInmmediate_wire;
 wire [31:0] InmmediateExtendAnded_wire;
 wire [31:0] offsetAdder_wire;
+wire [31:0] ZeroImmALU_wire;
 
 /*DATA MEMORY*/
 wire [31:0] RDM_wire;
@@ -76,6 +78,7 @@ wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
 
+reg [31:0] ZeroExtend_reg = 32'h00000000;
 integer ALUStatus;
 //////////////////////////////////////
 ////////////////FETCH/////////////////
@@ -95,6 +98,7 @@ ControlUnit
 	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire),
 	.Jump(Jump_wire),
+	.ZeroImm(ZeroImm_wire),
 	.ALUOp(ALUOp_wire)
 );
 
@@ -238,12 +242,28 @@ MUX_ForReadDataAndInmediate
 	.MUX_Output(ReadData2OrInmmediate_wire)
 );
 
+/*~~~~~~ZERO INMMEDIATE DATA SELECTOR~~~~~~~~~~*/
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_ZeroImmOrReadData
+(
+	.Selector(ZeroImm_wire),
+	.MUX_Data0(ReadData2OrInmmediate_wire),
+	.MUX_Data1(ZeroExtend_reg),
+	
+	.MUX_Output(ZeroImmALU_wire)
+);
+
+
 
 /*~~~~~~~~~SHIFT LEFT MODULE~~~~~~~~~~*/
 ShiftLeft2
 ShiftLeft
 (
 	.DataInput(InmmediateExtend_wire), //32-bit input:sign extender-output
+	
 	.DataOutput(slltoalu_wire) //32-bit output
 );
 
@@ -262,7 +282,7 @@ ArithmeticLogicUnit
 (
 	.ALUOperation(ALUOperation_wire),
 	.A(ReadData1_wire),
-	.B(ReadData2OrInmmediate_wire),
+	.B(ZeroImmALU_wire),
 	.Zero(Zero_wire),
 
 	.ALUResult(ALUResult_wire)
@@ -290,10 +310,9 @@ MUX_MemtoReg
 	.Selector(MemtoReg_wire),
 	.MUX_Data0(ALUResult_wire),
 	.MUX_Data1(RDM_wire),
-
+	
 	.MUX_Output(Writeback_wire)
 );
-
 
 assign ALUResultOut = ALUResult_wire;
 

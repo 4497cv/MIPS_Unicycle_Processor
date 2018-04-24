@@ -11,64 +11,66 @@ module Control
 	output ALUSrc,
 	output RegWrite,
 	output Jump,
+	output ZeroImm,
 	output [2:0]ALUOp
 );
 
-reg [11:0] ControlValues; //CONTROL VALUES OUTPUT
+reg [12:0] ControlValues; //CONTROL VALUES OUTPUT
 
 /*OP CODES: Instruction[31:26]*/
 
-localparam R_Type      = 6'h00;
-localparam I_Type_ADDI = 6'h08;
-localparam I_Type_ORI  = 6'h0d;
+localparam R_Type      = 6'h00; //*
+localparam I_Type_ADDI = 6'h08; //*
+localparam I_Type_ORI  = 6'h0d; 
 localparam I_Type_LUI  = 6'h0f;
 localparam I_Type_ANDI = 6'h0c;
 localparam I_Type_LW   = 6'h23;
 localparam I_Type_SW   = 6'h2b;
-localparam I_Type_BEQ  = 6'h04;
-localparam I_Type_BNE  = 6'h05;
+localparam I_Type_BEQ  = 6'h04; //*
+localparam I_Type_BNE  = 6'h05; //*
 localparam I_Type_J    = 6'h02;
 localparam I_Type_JAL  = 6'h03;
 
-/*ALU OP Control Values
-	000: ADD
-	001: SUB
-	010: OR
-	011: AND
-	100: JAL
-	101: LUI
-	110: J
-	111: FUNCT
+/*
+localparam AND = 3'b000;
+localparam OR  = 3'b001;
+localparam NOR = 3'b010;
+localparam ADD = 3'b011;
+localparam SUB = 3'b100;
+localparam LUI = 3'b101;
+localparam JAL = 3'b110;
 */
+
 
 always@(OP) begin
 	casex(OP)
-		R_Type:       ControlValues= 12'b1_001_00_000_111; //RegDst:Rt,RegWrite; FunctField(111)
-		I_Type_ADDI:  ControlValues= 12'b0_101_00_000_000; //RegDst:RS,ALUSRC; ADD(000)
-		I_Type_ORI:   ControlValues= 12'b0_101_00_000_010; //
-		I_Type_ANDI:  ControlValues= 12'b0_000_00_000_011; //
-		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101; //
-		I_Type_LW:	  ControlValues= 12'b0_111_10_000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
-		I_Type_SW:	  ControlValues= 12'bx_000_00_000_000; //AlUSrc,MemWrite;ADD(000)
-		I_Type_BEQ:	  ControlValues= 12'b0_000_00_010_100; //BranchEQ;SUB(100)
-		I_Type_BNE:	  ControlValues= 12'b0_000_00_100_100; //BranchNE;SUB(100)
-		I_Type_J: 	  ControlValues= 12'b0_000_00_001_110; //
-		I_Type_JAL:	  ControlValues= 12'b0_000_00_001_100; //
+		R_Type:       ControlValues= 13'b1_001_00_0000_111; //RegDst:Rt,RegWrite; FunctField(111)
+		I_Type_ADDI:  ControlValues= 13'b0_101_00_0000_000; //RegDst:RS,ALUSRC; ADD(000)
+		I_Type_ORI:   ControlValues= 13'b0_001_00_0001_001; //RegDest:Rt,RegWrite,ZeroImm
+		I_Type_ANDI:  ControlValues= 13'b0_001_00_0000_011; //
+		I_Type_LUI:   ControlValues= 13'b0_000_00_0000_101; //
+		I_Type_LW:	  ControlValues= 13'b0_111_10_0000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
+		I_Type_SW:	  ControlValues= 13'bx_000_00_0000_000; //AlUSrc,MemWrite;ADD(000)
+		I_Type_BEQ:	  ControlValues= 13'b0_000_00_0100_100; //BranchEQ;SUB(100)
+		I_Type_BNE:	  ControlValues= 13'b0_000_00_1000_100; //BranchNE;SUB(100)
+		I_Type_J: 	  ControlValues= 13'b0_000_00_0010_110; //
+		I_Type_JAL:	  ControlValues= 13'b0_000_00_0010_100; //
 
 		default:
-			ControlValues= 11'b0_000_00_00_000;
+			ControlValues= 13'b0_000_00_0000_000;
 		endcase
 end
 
-assign RegDst   = ControlValues[11];
-assign ALUSrc   = ControlValues[10];
-assign MemtoReg = ControlValues[9];
-assign RegWrite = ControlValues[8];
-assign MemRead  = ControlValues[7];
-assign MemWrite = ControlValues[6];
-assign BranchNE = ControlValues[5];
-assign BranchEQ = ControlValues[4];
-assign Jump     = ControlValues[3];
+assign RegDst   = ControlValues[12];
+assign ALUSrc   = ControlValues[11];
+assign MemtoReg = ControlValues[10];
+assign RegWrite = ControlValues[9];
+assign MemRead  = ControlValues[8];
+assign MemWrite = ControlValues[7];
+assign BranchNE = ControlValues[6];
+assign BranchEQ = ControlValues[5];
+assign Jump     = ControlValues[4];
+assign ZeroImm  = ControlValues[3];
 assign ALUOp    = ControlValues[2:0];
 
 endmodule

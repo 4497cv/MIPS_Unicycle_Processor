@@ -21,7 +21,7 @@
 # 19 compiles, 0 failed with no errors.
 vsim work.MIPS_Processor_TB
 # vsim work.MIPS_Processor_TB 
-# Start time: 20:26:13 on Apr 23,2018
+# Start time: 23:53:28 on Apr 23,2018
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -45,12 +45,24 @@ vsim work.MIPS_Processor_TB
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
 run
-run
-add wave -position 24  sim:/MIPS_Processor_TB/DUV/BranchEQ_wire
+add wave -position end sim:/MIPS_Processor_TB/DUV/ArithmeticLogicUnit/*
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/OP
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/RegDst
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/BranchEQ
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/BranchNE
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemRead
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemtoReg
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemWrite
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ALUSrc
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/RegWrite
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/Jump
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ZeroImm
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ALUOp
+add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ControlValues
 restart -f
 # ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
 run
-# End time: 20:30:56 on Apr 23,2018, Elapsed time: 0:04:43
+# End time: 23:57:37 on Apr 23,2018, Elapsed time: 0:04:09
 # Errors: 0, Warnings: 4
