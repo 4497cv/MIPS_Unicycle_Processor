@@ -9,7 +9,7 @@ z2
 cModel Technology
 d/home/c
 vAdder32bits
-Z0 !s110 1524532496
+Z0 !s110 1524533166
 !i10b 1
 !s100 ]H0^NRAm[`J07LMS2@]Pb2
 IG_baQBdB[Fm_mKT>[?JVF1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5c;63
 r1
 !s85 0
 31
-Z5 !s108 1524532496.000000
+Z5 !s108 1524533166.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !i113 1
@@ -251,7 +251,7 @@ R6
 R7
 n@m@u@x@register@file
 vORGate
-Z10 !s110 1524532497
+Z10 !s110 1524533167
 !i10b 1
 !s100 HIOV@TS6_iFo<CbNDz5?i1
 Ikl85ZMzI4Cb6Q1BZd1hK12
@@ -265,7 +265,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1524532497.000000
+Z11 !s108 1524533167.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v|
 !i113 1
@@ -295,7 +295,7 @@ R6
 R7
 n@p@c_@register
 vProgramMemory
-R10
+R0
 !i10b 1
 !s100 C2H8VMHl6HjPcJ]oY]Ua51
 Iaglg]5PZE?g2KSaZFV;^m1
@@ -317,7 +317,7 @@ R6
 R7
 n@program@memory
 vRegister
-R10
+R0
 !i10b 1
 !s100 egCIUc]UZ1M2z58M]>B@S3
 I81Ml4NDhj9`o?TBAW`foH0
@@ -331,7 +331,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Register.v|
 !i113 1
@@ -353,7 +353,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v|
 !i113 1

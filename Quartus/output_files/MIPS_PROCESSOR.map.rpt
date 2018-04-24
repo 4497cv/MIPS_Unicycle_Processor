@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_PROCESSOR
-Mon Apr 23 20:14:37 2018
+Mon Apr 23 20:25:20 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -93,15 +93,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 23 20:14:37 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 23 20:25:20 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_PROCESSOR                              ;
 ; Top-level Entity Name              ; MIPS_Processor                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 292                                         ;
-;     Total combinational functions  ; 260                                         ;
-;     Dedicated logic registers      ; 73                                          ;
-; Total registers                    ; 73                                          ;
+; Total logic elements               ; 378                                         ;
+;     Total combinational functions  ; 314                                         ;
+;     Dedicated logic registers      ; 105                                         ;
+; Total registers                    ; 105                                         ;
 ; Total pins                         ; 74                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -244,20 +244,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 292       ;
+; Estimated Total logic elements              ; 378       ;
 ;                                             ;           ;
-; Total combinational functions               ; 260       ;
+; Total combinational functions               ; 314       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 153       ;
-;     -- 3 input functions                    ; 61        ;
-;     -- <=2 input functions                  ; 46        ;
+;     -- 4 input functions                    ; 212       ;
+;     -- 3 input functions                    ; 82        ;
+;     -- <=2 input functions                  ; 20        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 212       ;
+;     -- normal mode                          ; 266       ;
 ;     -- arithmetic mode                      ; 48        ;
 ;                                             ;           ;
-; Total registers                             ; 73        ;
-;     -- Dedicated logic registers            ; 73        ;
+; Total registers                             ; 105       ;
+;     -- Dedicated logic registers            ; 105       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 74        ;
@@ -265,32 +265,35 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 73        ;
-; Total fan-out                               ; 1293      ;
-; Average fan-out                             ; 2.69      ;
+; Maximum fan-out                             ; 105       ;
+; Total fan-out                               ; 1668      ;
+; Average fan-out                             ; 2.94      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name     ; Library Name ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+-----------------+--------------+
-; |MIPS_Processor                                    ; 260 (0)             ; 73 (0)                    ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor  ; work         ;
-;    |ALU:ArithmeticLogicUnit|                       ; 159 (159)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU             ; work         ;
-;    |ALUControl:ArithmeticLogicUnitControl|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl      ; work         ;
-;    |Adder32bits:PC_4_adder|                        ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_4_adder                                  ; Adder32bits     ; work         ;
-;    |Multiplexer2to1:MUX_ForReadDataAndInmediate|   ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate             ; Multiplexer2to1 ; work         ;
-;    |Multiplexer2to1:MUX_RegisterDestinationSelect| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_RegisterDestinationSelect           ; Multiplexer2to1 ; work         ;
-;    |ORGate:BranchEqOrBranchNE|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ORGate:BranchEqOrBranchNE                               ; ORGate          ; work         ;
-;    |PC_Register:PROGRAM_COUNTER|                   ; 9 (9)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER                             ; PC_Register     ; work         ;
-;    |ProgramMemory:Instruction_Memory|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:Instruction_Memory                        ; ProgramMemory   ; work         ;
-;    |RegisterFile:Register_File|                    ; 36 (2)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile    ; work         ;
-;       |MUXRegisterFile:MUXRegister1|               ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile ; work         ;
-;       |MUXRegisterFile:MUXRegister2|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile ; work         ;
-;       |Register:Register_at|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_at         ; Register        ; work         ;
-;       |Register:Register_t0|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t0         ; Register        ; work         ;
-+----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+-----------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name         ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
+; |MIPS_Processor                                    ; 314 (0)             ; 105 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
+;    |ALU:ArithmeticLogicUnit|                       ; 126 (126)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
+;    |ALUControl:ArithmeticLogicUnitControl|         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
+;    |Adder32bits:PC_4_adder|                        ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_4_adder                                  ; Adder32bits         ; work         ;
+;    |Control:ControlUnit|                           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Control:ControlUnit                                     ; Control             ; work         ;
+;    |Multiplexer2to1:MUX_ForReadDataAndInmediate|   ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate             ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MUX_RegisterDestinationSelect| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_RegisterDestinationSelect           ; Multiplexer2to1     ; work         ;
+;    |ORGate:BranchEqOrBranchNE|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ORGate:BranchEqOrBranchNE                               ; ORGate              ; work         ;
+;    |PC_Register:PROGRAM_COUNTER|                   ; 9 (9)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER                             ; PC_Register         ; work         ;
+;    |ProgramMemory:Instruction_Memory|              ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:Instruction_Memory                        ; ProgramMemory       ; work         ;
+;    |RegisterFile:Register_File|                    ; 70 (0)              ; 96 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
+;       |DecoderRegisterFile:Decoder|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder  ; DecoderRegisterFile ; work         ;
+;       |MUXRegisterFile:MUXRegister1|               ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
+;       |MUXRegisterFile:MUXRegister2|               ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
+;       |Register:Register_at|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_at         ; Register            ; work         ;
+;       |Register:Register_t0|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t0         ; Register            ; work         ;
+;       |Register:Register_t1|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_t1         ; Register            ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1198,10 +1201,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RegisterFile:Register_File|Register:Register_sp|DataOutput[31]      ; Lost fanout                                        ;
 ; RegisterFile:Register_File|Register:Register_fp|DataOutput[31]      ; Lost fanout                                        ;
 ; RegisterFile:Register_File|Register:Register_ra|DataOutput[31]      ; Lost fanout                                        ;
-; RegisterFile:Register_File|Register:Register_t1|DataOutput[0]       ; Stuck at GND due to stuck port clock_enable        ;
-; RegisterFile:Register_File|Register:Register_t1|DataOutput[1]       ; Lost fanout                                        ;
-; RegisterFile:Register_File|Register:Register_t1|DataOutput[2..31]   ; Stuck at GND due to stuck port clock_enable        ;
-; Total Number of Removed Registers = 962                             ;                                                    ;
+; Total Number of Removed Registers = 930                             ;                                                    ;
 +---------------------------------------------------------------------+----------------------------------------------------+
 
 
@@ -1210,66 +1210,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
 ; Register name                                                    ; Reason for Removal        ; Registers Removed due to This Register                          ;
 +------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0]  ; Stuck at GND              ; PC_Register:PROGRAM_COUNTER|PCValue[0],                         ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_t1|DataOutput[0],  ;
-;                                                                  ;                           ; RegisterFile:Register_File|Register:Register_t1|DataOutput[31]  ;
 ; RegisterFile:Register_File|Register:Register_Zero|DataOutput[30] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[30], ;
 ;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[30]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[24] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[24], ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[24]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[25] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[25], ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[25]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[26] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[26], ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[26]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[27] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[27], ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[27]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[28] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[28], ;
-;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[28]  ;
 ; RegisterFile:Register_File|Register:Register_Zero|DataOutput[29] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[29], ;
 ;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[29]  ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[2]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[2]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[3]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[3]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[4]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[4]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[5]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[5]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[6]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[6]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[7]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[7]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[8]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[8]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[9]  ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[9]   ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[10] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[10]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[11] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[11]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[12] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[12]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[13] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[13]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[14] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[14]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[15] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[15]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[16] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[16]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[17] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[17]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[18] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[18]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[19] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[19]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[20] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[20]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[21] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[21]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[22] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[22]  ;
-;                                                                  ; due to stuck port data_in ;                                                                 ;
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[23] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_t1|DataOutput[23]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[28] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[28], ;
+;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[28]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[27] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[27], ;
+;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[27]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[26] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[26], ;
+;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[26]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[25] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[25], ;
+;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[25]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[24] ; Stuck at GND              ; RegisterFile:Register_File|Register:Register_v0|DataOutput[24], ;
+;                                                                  ; due to stuck port data_in ; RegisterFile:Register_File|Register:Register_v1|DataOutput[24]  ;
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0]  ; Stuck at GND              ; PC_Register:PROGRAM_COUNTER|PCValue[0]                          ;
 ;                                                                  ; due to stuck port data_in ;                                                                 ;
 +------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------+
 
@@ -1279,12 +1234,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 73    ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 73    ;
+; Number of registers using Asynchronous Clear ; 105   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1295,9 +1250,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1|Mux17 ;
-; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate|MUX_Output[19]    ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux22                                 ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux12                                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux31                                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux0                                  ;
+; 5:1                ; 31 bits   ; 93 LEs        ; 62 LEs               ; 31 LEs                 ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate|MUX_Output[16]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
@@ -1789,22 +1744,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 74                          ;
-; cycloneiii_ff         ; 73                          ;
+; cycloneiii_ff         ; 105                         ;
 ;     CLR SLD           ; 9                           ;
-;     ENA CLR           ; 64                          ;
-; cycloneiii_lcell_comb ; 261                         ;
+;     ENA CLR           ; 96                          ;
+; cycloneiii_lcell_comb ; 315                         ;
 ;     arith             ; 48                          ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 39                          ;
-;     normal            ; 213                         ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 38                          ;
+;     normal            ; 267                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 153                         ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 212                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.60                       ;
-; Average LUT depth     ; 10.55                       ;
+; Max LUT depth         ; 16.30                       ;
+; Average LUT depth     ; 11.99                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1823,7 +1778,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 23 20:14:13 2018
+    Info: Processing started: Mon Apr 23 20:24:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_PROCESSOR -c MIPS_PROCESSOR
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1869,7 +1824,7 @@ Info (12127): Elaborating entity "MIPS_Processor" for the top level hierarchy
 Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 99
 Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:PROGRAM_COUNTER" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 110
 Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:Instruction_Memory" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 122
-Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (4) in memory file does not match the number of elements in the address range [0:511] File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 34
+Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (6) in memory file does not match the number of elements in the address range [0:511] File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 34
 Warning (10030): Net "rom.data_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
 Warning (10030): Net "rom.waddr_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
 Warning (10030): Net "rom.we_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
@@ -1926,7 +1881,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "PortOut[30]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
     Warning (13410): Pin "PortOut[31]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 897 registers lost all their fanouts during netlist optimizations.
+Info (17049): 896 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
@@ -1938,14 +1893,14 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PortIn[5]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
     Warning (15610): No output dependent on input pin "PortIn[6]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
     Warning (15610): No output dependent on input pin "PortIn[7]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-Info (21057): Implemented 398 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 484 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 324 logic cells
+    Info (21061): Implemented 410 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 972 megabytes
-    Info: Processing ended: Mon Apr 23 20:14:37 2018
+    Info: Peak virtual memory: 962 megabytes
+    Info: Processing ended: Mon Apr 23 20:25:20 2018
     Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:55
+    Info: Total CPU time (on all processors): 00:00:56
 
 
