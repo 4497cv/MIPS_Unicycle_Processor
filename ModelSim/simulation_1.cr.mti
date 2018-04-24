@@ -40,6 +40,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	MIPS_Processor
 
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module LUIOp
+
+Top level modules:
+	LUIOp
+
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module SignExtend
@@ -61,20 +68,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	ALUControl
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module DataMemory
-
-Top level modules:
-	DataMemory
-
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module DecoderRegisterFile
-
-Top level modules:
-	DecoderRegisterFile
-
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ZeroImm
@@ -88,6 +81,20 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 
 Top level modules:
 	ShiftLeft2
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DataMemory
+
+Top level modules:
+	DataMemory
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DecoderRegisterFile
+
+Top level modules:
+	DecoderRegisterFile
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017

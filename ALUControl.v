@@ -32,7 +32,7 @@ localparam R_Type_JR	   = 9'b111_001000;	 //funct = 6'h08
 localparam I_Type_ADDI   = 9'b011_xxxxxx;	 //R[rt] = R[rs] + SignExtImm
 localparam I_Type_ORI    = 9'b001_xxxxxx;	   //R[rt] = R[rs] | ZeroExtImm
 localparam I_Type_ANDI   = 9'b000_xxxxxx;		 //R[rt] = R[rs] & ZeroExtImm
-localparam I_Type_LUI    = 9'b000_xxxxxx;		 //R[rt] = {imm, 16’b0}
+localparam I_Type_LUI    = 9'b101_xxxxxx;		 //R[rt] = {imm, 16’b0}
 localparam I_Type_LW     = 9'b000_xxxxxx;		 //R[rt] = M[R[rs]+SignExtImm]
 localparam I_Type_SW     = 9'b000_xxxxxx;		 //M[R[rs]+SignExtImm] = R[rt]
 localparam I_Type_BEQ	   = 9'b100_xxxxxx;     //if(R[rs]==R[rt]): PC=PC+4+BranchAddr
@@ -62,6 +62,9 @@ always@(Selector)begin
 		R_Type_NOR:    ALUControlValues = 3'b010;
 		R_Type_ADD:    ALUControlValues = 3'b011; //add
 		I_Type_ANDI:   ALUControlValues = 3'b000; //and
+		I_Type_LW:  	 ALUControlValues = 3'b011;
+		I_Type_SW:     ALUControlValues = 3'b011;
+		I_Type_LUI:    ALUControlValues = 3'b101;
 //	R_Type_SLL:		 ALUControlValues = 4'b;
 //	R_Type_SRL:    ALUControlValues = 4'b;
 		//R_Type_J:
