@@ -24,7 +24,7 @@ localparam I_Type_ORI  = 6'h0d;
 localparam I_Type_LUI  = 6'h0f;
 localparam I_Type_ANDI = 6'h0c;
 localparam I_Type_LW   = 6'h23;
-localparam I_Type_SW	  = 6'h2b;
+localparam I_Type_SW   = 6'h2b;
 localparam I_Type_BEQ  = 6'h04;
 localparam I_Type_BNE  = 6'h05;
 localparam I_Type_J    = 6'h02;
@@ -50,8 +50,8 @@ always@(OP) begin
 		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101; //
 		I_Type_LW:	  ControlValues= 12'b0_111_10_000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
 		I_Type_SW:	  ControlValues= 12'bx_000_00_000_000; //AlUSrc,MemWrite;ADD(000)
-		I_Type_BEQ:	  ControlValues= 12'bx_000_x0_010_001; //BranchEQ;SUB(001)
-		I_Type_BNE:	  ControlValues= 12'bx_000_x0_100_001; //BranchNE;SUB(001)
+		I_Type_BEQ:	  ControlValues= 12'b0_000_00_010_100; //BranchEQ;SUB(100)
+		I_Type_BNE:	  ControlValues= 12'b0_000_00_100_100; //BranchNE;SUB(100)
 		I_Type_J: 	  ControlValues= 12'b0_000_00_001_110; //
 		I_Type_JAL:	  ControlValues= 12'b0_000_00_001_100; //
 

@@ -23,8 +23,13 @@ add wave -noupdate -label {SGN INPUT} -radix binary /MIPS_Processor_TB/DUV/SignE
 add wave -noupdate -label {SGN OUTPUT} -radix binary /MIPS_Processor_TB/DUV/SignExtender/SignExtendOutput
 add wave -noupdate -label {SLL INPUT} -radix binary /MIPS_Processor_TB/DUV/ShiftLeft/DataInput
 add wave -noupdate -label {SLL OUTPUT} -radix binary /MIPS_Processor_TB/DUV/ShiftLeft/DataOutput
+add wave -noupdate /MIPS_Processor_TB/DUV/ControlUnit/BranchNE
+add wave -noupdate /MIPS_Processor_TB/DUV/ArithmeticLogicUnit/Zero
+add wave -noupdate /MIPS_Processor_TB/DUV/BRANCHNE_AND_ZERO/A
+add wave -noupdate /MIPS_Processor_TB/DUV/BRANCHNE_AND_ZERO/B
+add wave -noupdate /MIPS_Processor_TB/DUV/BRANCHNE_AND_ZERO/C
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {23 ps} 0}
+WaveRestoreCursors {{Cursor 1} {16 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -40,4 +45,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {51 ps} {59 ps}
+WaveRestoreZoom {0 ps} {32 ps}

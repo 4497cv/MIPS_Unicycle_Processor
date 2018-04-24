@@ -21,7 +21,7 @@
 # 19 compiles, 0 failed with no errors.
 vsim work.MIPS_Processor_TB
 # vsim work.MIPS_Processor_TB 
-# Start time: 19:31:00 on Apr 23,2018
+# Start time: 20:15:08 on Apr 23,2018
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -45,5 +45,6 @@ vsim work.MIPS_Processor_TB
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
 run
-# End time: 19:32:44 on Apr 23,2018, Elapsed time: 0:01:44
+run
+# End time: 20:18:16 on Apr 23,2018, Elapsed time: 0:03:08
 # Errors: 0, Warnings: 2

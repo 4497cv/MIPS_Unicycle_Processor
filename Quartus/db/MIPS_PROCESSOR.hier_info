@@ -91,9 +91,9 @@ MemWrite <= <GND>
 ALUSrc <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 RegWrite <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 Jump <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|PC_Register:PROGRAM_COUNTER
@@ -8778,18 +8778,21 @@ ALUOp[0] => Equal2.IN13
 ALUOp[0] => Equal3.IN13
 ALUOp[0] => Equal4.IN13
 ALUOp[0] => WideNor0.IN0
+ALUOp[0] => WideNor1.IN0
 ALUOp[1] => Equal0.IN12
 ALUOp[1] => Equal1.IN12
 ALUOp[1] => Equal2.IN12
 ALUOp[1] => Equal3.IN12
 ALUOp[1] => Equal4.IN12
 ALUOp[1] => WideNor0.IN1
+ALUOp[1] => WideNor1.IN1
 ALUOp[2] => Equal0.IN11
 ALUOp[2] => Equal1.IN11
 ALUOp[2] => Equal2.IN11
 ALUOp[2] => Equal3.IN11
 ALUOp[2] => Equal4.IN11
 ALUOp[2] => WideNor0.IN2
+ALUOp[2] => WideNor1.IN2
 ALUFunction[0] => Equal0.IN19
 ALUFunction[0] => Equal1.IN19
 ALUFunction[0] => Equal2.IN19
@@ -8820,9 +8823,9 @@ ALUFunction[5] => Equal1.IN14
 ALUFunction[5] => Equal2.IN14
 ALUFunction[5] => Equal3.IN14
 ALUFunction[5] => Equal4.IN14
-ALUOperation[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-ALUOperation[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-ALUOperation[2] <= ALUControlValues.DB_MAX_OUTPUT_PORT_TYPE
+ALUOperation[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+ALUOperation[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+ALUOperation[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|ALU:ArithmeticLogicUnit
