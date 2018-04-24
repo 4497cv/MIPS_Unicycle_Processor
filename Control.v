@@ -50,8 +50,8 @@ always@(OP) begin
 		I_Type_LUI:   ControlValues= 12'b0_000_00_000_101; //
 		I_Type_LW:	  ControlValues= 12'b0_111_10_000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
 		I_Type_SW:	  ControlValues= 12'bx_000_00_000_000; //AlUSrc,MemWrite;ADD(000)
-		I_Type_BEQ:	  ControlValues= 12'bx_100_x0_000_000; //BranchEQ;SUB(001)
-		I_Type_BNE:	  ControlValues= 12'bx_010_x0_000_000; //BranchNE;SUB(001)
+		I_Type_BEQ:	  ControlValues= 12'bx_000_x0_010_001; //BranchEQ;SUB(001)
+		I_Type_BNE:	  ControlValues= 12'bx_000_x0_100_001; //BranchNE;SUB(001)
 		I_Type_J: 	  ControlValues= 12'b0_000_00_001_110; //
 		I_Type_JAL:	  ControlValues= 12'b0_000_00_001_100; //
 

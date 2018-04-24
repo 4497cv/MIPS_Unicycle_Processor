@@ -10,8 +10,9 @@
 *	01/03/2014
 ******************************************************************/
 
-module DataMemory 
-#(	parameter DATA_WIDTH=8,
+module DataMemory
+#(
+	parameter DATA_WIDTH=32,
 	parameter MEMORY_DEPTH = 1024
 )
 (
@@ -20,7 +21,7 @@ module DataMemory
 	input MemWrite,MemRead, clk,
 	output  [DATA_WIDTH-1:0]  ReadData
 );
-	
+
 	// Declare the RAM variable
 	reg [DATA_WIDTH-1:0] ram[MEMORY_DEPTH-1:0];
 	wire [DATA_WIDTH-1:0] ReadDataAux;

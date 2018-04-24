@@ -19,7 +19,7 @@
 
 module ALU
 (
-	input [3:0] ALUOperation,
+	input [2:0] ALUOperation,
 	input [31:0] A,
 	input [31:0] B,
 	output reg Zero,

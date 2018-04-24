@@ -82,15 +82,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	DecoderRegisterFile
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ANDGate
 
 Top level modules:
 	ANDGate
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017

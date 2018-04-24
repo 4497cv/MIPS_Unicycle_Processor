@@ -44,15 +44,16 @@ wire BranchNE_wire; //BRANCH IF NOT EQUAL WIRE(1-BIT)
 wire BranchEQ_wire; //BRANCH IF EQUAL WIRE (1-BIT)
 wire MemRead_wire;
 wire MemtoReg_wire;
-wire [2:0] ALUOp_wire;
 wire MemWrite_wire;
 wire ALUSrc_wire;
 wire RegWrite_wire;
 wire Jump_wire;
 wire BranchTest_1_wire;
+wire BranchTest_2_wire;
+wire [2:0] ALUOp_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
-wire [3:0] ALUOperation_wire;
+wire [2:0] ALUOperation_wire;
 wire [31:0] ALUResult_wire;
 wire [31:0] slltoalu_wire;
 wire Zero_wire;
@@ -69,8 +70,8 @@ wire [31:0] InmmediateExtendAnded_wire;
 wire [31:0] offsetAdder_wire;
 
 /*DATA MEMORY*/
-wire [31:0] ReadDataMemory_wire;
-
+wire [31:0] RDM_wire;
+wire [31:0] Writeback_wire;
 wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
@@ -152,7 +153,7 @@ Register_File
 	.WriteRegister(WriteRegister_wire),
 	.ReadRegister1(Instruction_wire[25:21]),
 	.ReadRegister2(Instruction_wire[20:16]),
-	.WriteData(ALUResult_wire),
+	.WriteData(Writeback_wire),
 	.ReadData1(ReadData1_wire),
 	.ReadData2(ReadData2_wire)
 );
@@ -219,7 +220,7 @@ SignExtend
 SignExtender
 (
 	.DataInput(Instruction_wire[15:0]),
-        .SignExtendOutput(InmmediateExtend_wire)
+   .SignExtendOutput(InmmediateExtend_wire)
 );
 
 
@@ -267,11 +268,9 @@ ArithmeticLogicUnit
 	.ALUResult(ALUResult_wire)
 );
 
+////////////WRITE BACK////////////////
 /*~~~~~~~~~~DATA MEMORY~~~~~~~~~~*/
 DataMemory
-#(
-	.MEMORY_DEPTH(MEMORY_DEPTH)
-)
 DataMemory
 (
 	.clk(clk),
@@ -279,8 +278,22 @@ DataMemory
 	.WriteData(ReadData2_wire),
 	.MemWrite(MemWrite_wire),
 	.MemRead(MemRead_wire),
-	.ReadData(ReadDataMemory_wire)
+	.ReadData(RDM_wire)
 );
+
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_MemtoReg
+(
+	.Selector(MemtoReg_wire),
+	.MUX_Data0(ALUResult_wire),
+	.MUX_Data1(RDM_wire),
+
+	.MUX_Output(Writeback_wire)
+);
+
 
 assign ALUResultOut = ALUResult_wire;
 
