@@ -78,7 +78,7 @@ wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
 wire ORForBranch;
 
-reg [31:0] ZeroExtend_reg = 32'h00000000;
+wire [31:0] ZeroExtend_wire;
 integer ALUStatus;
 //////////////////////////////////////
 ////////////////FETCH/////////////////
@@ -241,6 +241,15 @@ MUX_ForReadDataAndInmediate
 
 	.MUX_Output(ReadData2OrInmmediate_wire)
 );
+/*~~~~~~ZERO INMMEDIATE~~~~~~~~~~*/
+ZeroImm
+ZeroImmExtender
+(
+	.immediate(Instruction_wire[15:0]),
+
+	.ZeroExtImm(ZeroExtend_wire)
+);
+
 
 /*~~~~~~ZERO INMMEDIATE DATA SELECTOR~~~~~~~~~~*/
 Multiplexer2to1
@@ -251,11 +260,10 @@ MUX_ZeroImmOrReadData
 (
 	.Selector(ZeroImm_wire),
 	.MUX_Data0(ReadData2OrInmmediate_wire),
-	.MUX_Data1(ZeroExtend_reg),
-	
+	.MUX_Data1(ZeroExtend_wire),
+
 	.MUX_Output(ZeroImmALU_wire)
 );
-
 
 
 /*~~~~~~~~~SHIFT LEFT MODULE~~~~~~~~~~*/
@@ -263,7 +271,7 @@ ShiftLeft2
 ShiftLeft
 (
 	.DataInput(InmmediateExtend_wire), //32-bit input:sign extender-output
-	
+
 	.DataOutput(slltoalu_wire) //32-bit output
 );
 
@@ -310,7 +318,7 @@ MUX_MemtoReg
 	.Selector(MemtoReg_wire),
 	.MUX_Data0(ALUResult_wire),
 	.MUX_Data1(RDM_wire),
-	
+
 	.MUX_Output(Writeback_wire)
 );
 

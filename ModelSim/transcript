@@ -18,10 +18,11 @@
 # Compile of ShiftLeft2.v was successful.
 # Compile of SignExtend.v was successful.
 # Compile of ORGate.v was successful.
-# 19 compiles, 0 failed with no errors.
+# Compile of ZeroImm.v was successful.
+# 20 compiles, 0 failed with no errors.
 vsim work.MIPS_Processor_TB
 # vsim work.MIPS_Processor_TB 
-# Start time: 23:53:28 on Apr 23,2018
+# Start time: 01:46:23 on Apr 24,2018
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
@@ -36,6 +37,7 @@ vsim work.MIPS_Processor_TB
 # Loading work.ANDGate
 # Loading work.ORGate
 # Loading work.SignExtend
+# Loading work.ZeroImm
 # Loading work.ShiftLeft2
 # Loading work.ALUControl
 # Loading work.ALU
@@ -43,26 +45,10 @@ vsim work.MIPS_Processor_TB
 # ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(246): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/wave_check_R.do
+# Load canceled
 run
-add wave -position end sim:/MIPS_Processor_TB/DUV/ArithmeticLogicUnit/*
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/OP
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/RegDst
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/BranchEQ
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/BranchNE
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemRead
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemtoReg
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/MemWrite
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ALUSrc
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/RegWrite
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/Jump
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ZeroImm
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ALUOp
-add wave -position end  sim:/MIPS_Processor_TB/DUV/ControlUnit/ControlValues
-restart -f
-# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
-# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
-run
-# End time: 23:57:37 on Apr 23,2018, Elapsed time: 0:04:09
-# Errors: 0, Warnings: 4
+# End time: 01:46:56 on Apr 24,2018, Elapsed time: 0:00:33
+# Errors: 1, Warnings: 3

@@ -21,7 +21,7 @@ reg [12:0] ControlValues; //CONTROL VALUES OUTPUT
 
 localparam R_Type      = 6'h00; //*
 localparam I_Type_ADDI = 6'h08; //*
-localparam I_Type_ORI  = 6'h0d; 
+localparam I_Type_ORI  = 6'h0d; //*
 localparam I_Type_LUI  = 6'h0f;
 localparam I_Type_ANDI = 6'h0c;
 localparam I_Type_LW   = 6'h23;
@@ -41,15 +41,14 @@ localparam LUI = 3'b101;
 localparam JAL = 3'b110;
 */
 
-
 always@(OP) begin
 	casex(OP)
 		R_Type:       ControlValues= 13'b1_001_00_0000_111; //RegDst:Rt,RegWrite; FunctField(111)
-		I_Type_ADDI:  ControlValues= 13'b0_101_00_0000_000; //RegDst:RS,ALUSRC; ADD(000)
-		I_Type_ORI:   ControlValues= 13'b0_001_00_0001_001; //RegDest:Rt,RegWrite,ZeroImm
-		I_Type_ANDI:  ControlValues= 13'b0_001_00_0000_011; //
-		I_Type_LUI:   ControlValues= 13'b0_000_00_0000_101; //
-		I_Type_LW:	  ControlValues= 13'b0_111_10_0000_000; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(000)
+		I_Type_ADDI:  ControlValues= 13'b0_101_00_0000_011; //RegDst:RS,ALUSRC; ADD(011)
+		I_Type_ORI:   ControlValues= 13'b0_001_00_0001_001; //RegDest:Rt,RegWrite,ZeroImm; OR(001)
+		I_Type_ANDI:  ControlValues= 13'b0_001_00_0001_000; //RegDest:Rt,RegWrite, ZeroImm; AND(000)
+		I_Type_LUI:   ControlValues= 13'b0_001_00_0000_101; //RegDest:Rt,RegWrite, ;LUI(101)
+		I_Type_LW:	  ControlValues= 13'b0_111_10_0000_011; //ALUSrc,MemtoReg,RegWrite,MemRead;ADD(011)
 		I_Type_SW:	  ControlValues= 13'bx_000_00_0000_000; //AlUSrc,MemWrite;ADD(000)
 		I_Type_BEQ:	  ControlValues= 13'b0_000_00_0100_100; //BranchEQ;SUB(100)
 		I_Type_BNE:	  ControlValues= 13'b0_000_00_1000_100; //BranchNE;SUB(100)
