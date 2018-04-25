@@ -1,17 +1,13 @@
-/******************************************************************
-* Description
-*	This is the control unit for the ALU. It receves an signal called
-*	ALUOp from the control unit and a signal called ALUFunction from
-*	the intrctuion field named function.
-* Version:
-*	1.0
-* Author:
-*	Dr. José Luis Pizano Escalante
-* email:
-*	luispizano@iteso.mx
-* Date:
-*	01/03/2014
-******************************************************************/
+/*
+	TITLE: ARITHMETIC LOGIC UNIT CONTROL
+	CODED BY CÉSAR VILLARREAL & GUILLERMO ROLDÁN
+
+	Description:
+
+	this module contains the values needed for the control of the arithmetic logic unit;
+
+*/
+
 module ALUControl
 (
 	input [2:0] ALUOp,

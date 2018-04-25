@@ -1,21 +1,13 @@
-/******************************************************************
-* Description
-*	This is an 32-bit arithetic logic unit that can execute the next set of operations:
-*		add
-*		sub
-*		or
-*		and
-*		nor
-* This ALU is written by using behavioral description.
-* Version:
-*	1.0
-* Author:
-*	Dr. José Luis Pizano Escalante
-* email:
-*	luispizano@iteso.mx
-* Date:
-*	01/03/2014
-******************************************************************/
+/*
+	TITLE: ARITHMETIC LOGIC UNIT MODULE
+	CODED BY CÉSAR VILLARREAL & GUILLERMO ROLDÁN
+
+	Description:
+
+	this module executes operations of inputs A and B;
+	if branch is equal, ALU must return zero.
+	
+*/
 
 module ALU
 (
@@ -62,4 +54,4 @@ localparam SRL = 3'b001;
 		endcase // case(control)
 		Zero = (ALUResult==0) ? 1'b1 : 1'b0;
      end // always @ (A or B or control)
-endmodule // ALU
+endmodule

@@ -61,19 +61,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	SignExtend
 
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Multiplexer3to1
+
+Top level modules:
+	Multiplexer3to1
+
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ORGate
 
 Top level modules:
 	ORGate
-
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module DecoderRegisterFile
-
-Top level modules:
-	DecoderRegisterFile
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -82,6 +82,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	ALUControl
 
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DecoderRegisterFile
+
+Top level modules:
+	DecoderRegisterFile
+
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module DataMemory
@@ -89,19 +96,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	DataMemory
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module ShiftLeft2
-
-Top level modules:
-	ShiftLeft2
-
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ZeroImm
 
 Top level modules:
 	ZeroImm
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ShiftLeft2
+
+Top level modules:
+	ShiftLeft2
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -120,13 +127,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	MUXRegisterFile
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module Control
-
-Top level modules:
-	Control
-
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module ProgramMemory
@@ -140,6 +140,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 
 Top level modules:
 	Multiplexer2to1
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module Control
+
+Top level modules:
+	Control
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017

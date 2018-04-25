@@ -4,12 +4,6 @@
 	SECOND PRACTICE: UNICYCLE PROCESSOR
 */
 
-/*
-	TO-DO:
-
-	MODIFY CONTROL VARIABLES, AND VERIFY BRANCH AND LOAD INSTRUCTIONS
-*/
-
 module MIPS_Processor
 #(
 	parameter MEMORY_DEPTH = 512,
@@ -39,13 +33,14 @@ wire [31:0] PCMUX_OFFSET_wire;
 wire [31:0] Instruction_wire;
 
 /* CONTROL UNIT WIRES */
-wire RegDst_wire;
+wire [1:0] RegDst_wire;
 wire BranchNE_wire; //BRANCH IF NOT EQUAL WIRE(1-BIT)
 wire BranchEQ_wire; //BRANCH IF EQUAL WIRE (1-BIT)
 wire MemRead_wire;
-wire MemtoReg_wire;
+wire [1:0] MemtoReg_wire;
 wire MemWrite_wire;
 wire ALUSrc_wire;
+wire PcSrc_wire;
 wire RegWrite_wire;
 wire Jump_wire;
 wire ZeroImm_wire;
@@ -90,7 +85,7 @@ wire [31:0] LuitoJal_wire;
 //////////////////////////////////////
 ////////////////FETCH/////////////////
 
-/*~~~~~~~~~~~CONTROL UNIT~~~~~~~~~~*/
+/*~~~~~~~~~~~~~CONTROL UNIT~~~~~~~~~~*/
 Control
 ControlUnit
 (
@@ -171,12 +166,11 @@ MUX_JUMPADDRESS
 (
 	.Selector(Jump_wire),
 	.MUX_Data0(PCMUX_OFFSET_wire),
-	.MUX_Data1({JumpAddress_wire,PC_4_wire[31:28]}),
-
+	.MUX_Data1(JumpAddr_wire), //JUMPADDR
 	.MUX_Output(JumpAddressPC_wire)
 );
 
-/*~~~~~~~~~~~~~JUMP AND LINK~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~JUMP AND LINK~~~~~~~~~~ */
 JumpAddrOP
 JALMODULE
 (
@@ -215,8 +209,8 @@ Register_File
 	.ReadData2(ReadData2_wire)
 );
 
-/*~~~~~~~~~~~REG SOURCE DATA SELECTOR (RT[0], RD[1])~~~~~~~~*/
-Multiplexer2to1
+/*~~~~~~~~~~~REG SOURCE DATA SELECTOR (RT[0], RD[1],ra)~~~~~~~~*/
+Multiplexer3to1
 #(
 	.NBits(5)
 )
@@ -225,6 +219,7 @@ MUX_RegisterDestinationSelect
 	.Selector(RegDst_wire),
 	.MUX_Data0(Instruction_wire[20:16]),
 	.MUX_Data1(Instruction_wire[15:11]),
+	.MUX_Data2(5'b11111),
 
 	.MUX_Output(WriteRegister_wire)
 );
@@ -244,7 +239,6 @@ MUX_Offset
 );
 
 /*~~~~~~~~~~~~~~~~~~~~~~~AND GATE~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-///PENDING...
 ANDGate
 BRANCHEQ_AND_ZERO
 (
@@ -277,6 +271,7 @@ SignExtend
 SignExtender
 (
 	.DataInput(Instruction_wire[15:0]),
+
    .SignExtendOutput(InmmediateExtend_wire)
 );
 
@@ -370,7 +365,7 @@ ArithmeticLogicUnit
 );
 
 ////////////WRITE BACK////////////////
-/*~~~~~~~~~~DATA MEMORY~~~~~~~~~~*/
+/*~~~~~~~~~~~~DATA MEMORY~~~~~~~~~~~*/
 DataMemory
 DataMemory
 (
@@ -382,7 +377,7 @@ DataMemory
 	.ReadData(RDM_wire)
 );
 
-Multiplexer2to1
+Multiplexer3to1
 #(
 	.NBits(32)
 )
@@ -391,6 +386,7 @@ MUX_MemtoReg
 	.Selector(MemtoReg_wire),
 	.MUX_Data0(ALUResult_wire),
 	.MUX_Data1(RDM_wire),
+	.MUX_Data2(JumpAddr_wire),
 
 	.MUX_Output(MemtoLUI_wire)
 );

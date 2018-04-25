@@ -8,9 +8,8 @@ module JumpAddrOP
 
 always@(*)
 	begin
-	JumpAddr = {PC_4,address,2'b00};
-   JumpAddr = JumpAddr + 8;
+	JumpAddr = {PC_4, address, 2'b00};
+  JumpAddr = JumpAddr;
 	end
-
 
 endmodule

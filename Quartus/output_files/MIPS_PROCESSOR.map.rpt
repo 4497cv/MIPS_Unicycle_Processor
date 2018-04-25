@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_PROCESSOR
-Tue Apr 24 05:49:40 2018
+Wed Apr 25 11:36:01 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,66 +14,68 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Processor
- 12. Parameter Settings for User Entity Instance: PC_Register:PROGRAM_COUNTER
- 13. Parameter Settings for User Entity Instance: ProgramMemory:Instruction_Memory
- 14. Parameter Settings for User Entity Instance: Adder32bits:PC_4_adder
- 15. Parameter Settings for User Entity Instance: Adder32bits:PC_offset_adder
- 16. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_JUMPADDRESS
- 17. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_JUMPANDLINK
- 18. Parameter Settings for User Entity Instance: RegisterFile:Register_File
- 19. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero
- 20. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at
- 21. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0
- 22. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1
- 23. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0
- 24. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1
- 25. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2
- 26. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3
- 27. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0
- 28. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1
- 29. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2
- 30. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3
- 31. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4
- 32. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5
- 33. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6
- 34. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7
- 35. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0
- 36. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1
- 37. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2
- 38. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3
- 39. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4
- 40. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5
- 41. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6
- 42. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7
- 43. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8
- 44. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9
- 45. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0
- 46. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1
- 47. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp
- 48. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp
- 49. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp
- 50. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra
- 51. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
- 52. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
- 53. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_RegisterDestinationSelect
- 54. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_Offset
- 55. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate
- 56. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ZeroImmOrReadData
- 57. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_LUI
- 58. Parameter Settings for User Entity Instance: DataMemory:DataMemory
- 59. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_MemtoReg
- 60. Port Connectivity Checks: "LUIOp:LUIOPERATION"
- 61. Port Connectivity Checks: "ZeroImm:ZeroImmExtender"
- 62. Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero"
- 63. Port Connectivity Checks: "JumpAddrOP:JALMODULE"
- 64. Port Connectivity Checks: "ShiftLeft2:ShiftLeftADDR"
- 65. Port Connectivity Checks: "Adder32bits:PC_4_adder"
- 66. Post-Synthesis Netlist Statistics for Top Partition
- 67. Elapsed Time Per Partition
- 68. Analysis & Synthesis Messages
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_Processor
+ 13. Parameter Settings for User Entity Instance: PC_Register:PROGRAM_COUNTER
+ 14. Parameter Settings for User Entity Instance: ProgramMemory:Instruction_Memory
+ 15. Parameter Settings for User Entity Instance: Adder32bits:PC_4_adder
+ 16. Parameter Settings for User Entity Instance: Adder32bits:PC_offset_adder
+ 17. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_JUMPADDRESS
+ 18. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_JUMPANDLINK
+ 19. Parameter Settings for User Entity Instance: RegisterFile:Register_File
+ 20. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero
+ 21. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at
+ 22. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0
+ 23. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1
+ 24. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0
+ 25. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1
+ 26. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2
+ 27. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3
+ 28. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0
+ 29. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1
+ 30. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2
+ 31. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3
+ 32. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4
+ 33. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5
+ 34. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6
+ 35. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7
+ 36. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0
+ 37. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1
+ 38. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2
+ 39. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3
+ 40. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4
+ 41. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5
+ 42. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6
+ 43. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7
+ 44. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8
+ 45. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9
+ 46. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0
+ 47. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1
+ 48. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp
+ 49. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp
+ 50. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp
+ 51. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra
+ 52. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
+ 53. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
+ 54. Parameter Settings for User Entity Instance: Multiplexer3to1:MUX_RegisterDestinationSelect
+ 55. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_Offset
+ 56. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate
+ 57. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ZeroImmOrReadData
+ 58. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_LUI
+ 59. Parameter Settings for User Entity Instance: DataMemory:DataMemory
+ 60. Parameter Settings for User Entity Instance: Multiplexer3to1:MUX_MemtoReg
+ 61. Port Connectivity Checks: "LUIOp:LUIOPERATION"
+ 62. Port Connectivity Checks: "ZeroImm:ZeroImmExtender"
+ 63. Port Connectivity Checks: "Multiplexer3to1:MUX_RegisterDestinationSelect"
+ 64. Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero"
+ 65. Port Connectivity Checks: "JumpAddrOP:JALMODULE"
+ 66. Port Connectivity Checks: "ShiftLeft2:ShiftLeftADDR"
+ 67. Port Connectivity Checks: "Adder32bits:PC_4_adder"
+ 68. Post-Synthesis Netlist Statistics for Top Partition
+ 69. Elapsed Time Per Partition
+ 70. Analysis & Synthesis Messages
 
 
 
@@ -99,13 +101,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 24 05:49:39 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 25 11:35:59 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_PROCESSOR                              ;
 ; Top-level Entity Name              ; MIPS_Processor                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 58,582                                      ;
-;     Total combinational functions  ; 24,886                                      ;
+; Total logic elements               ; 58,555                                      ;
+;     Total combinational functions  ; 24,859                                      ;
 ;     Dedicated logic registers      ; 33,790                                      ;
 ; Total registers                    ; 33790                                       ;
 ; Total pins                         ; 74                                          ;
@@ -215,7 +217,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -244,6 +246,7 @@ refer to the applicable agreement for further details.
 ; ../MUXRegisterFile.v                                    ; yes             ; User Verilog HDL File        ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MUXRegisterFile.v     ;         ;
 ; ../Multiplexer2to1.v                                    ; yes             ; User Verilog HDL File        ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v     ;         ;
 ; ../ORGate.v                                             ; yes             ; User Verilog HDL File        ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v              ;         ;
+; ../Multiplexer3to1.v                                    ; yes             ; User Verilog HDL File        ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v     ;         ;
 ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/BNE_TEST.dat ; yes             ; Auto-Found Unspecified File  ; /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/BNE_TEST.dat          ;         ;
 +---------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
 
@@ -253,17 +256,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 58,582    ;
+; Estimated Total logic elements              ; 58,555    ;
 ;                                             ;           ;
-; Total combinational functions               ; 24886     ;
+; Total combinational functions               ; 24859     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 23553     ;
-;     -- 3 input functions                    ; 1245      ;
-;     -- <=2 input functions                  ; 88        ;
+;     -- 4 input functions                    ; 24584     ;
+;     -- 3 input functions                    ; 193       ;
+;     -- <=2 input functions                  ; 82        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 24768     ;
-;     -- arithmetic mode                      ; 118       ;
+;     -- normal mode                          ; 24769     ;
+;     -- arithmetic mode                      ; 90        ;
 ;                                             ;           ;
 ; Total registers                             ; 33790     ;
 ;     -- Dedicated logic registers            ; 33790     ;
@@ -275,8 +278,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 33790     ;
-; Total fan-out                               ; 200645    ;
-; Average fan-out                             ; 3.41      ;
+; Total fan-out                               ; 201598    ;
+; Average fan-out                             ; 3.43      ;
 +---------------------------------------------+-----------+
 
 
@@ -285,24 +288,25 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name         ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
-; |MIPS_Processor                                    ; 24886 (0)           ; 33790 (0)                 ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
-;    |ALU:ArithmeticLogicUnit|                       ; 193 (193)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
-;    |ALUControl:ArithmeticLogicUnitControl|         ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
+; |MIPS_Processor                                    ; 24859 (0)           ; 33790 (0)                 ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
+;    |ALU:ArithmeticLogicUnit|                       ; 194 (194)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
+;    |ALUControl:ArithmeticLogicUnitControl|         ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
 ;    |Adder32bits:PC_4_adder|                        ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_4_adder                                  ; Adder32bits         ; work         ;
-;    |Adder32bits:PC_offset_adder|                   ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_offset_adder                             ; Adder32bits         ; work         ;
-;    |Control:ControlUnit|                           ; 18 (18)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Control:ControlUnit                                     ; Control             ; work         ;
-;    |DataMemory:DataMemory|                         ; 22859 (22859)       ; 32768 (32768)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|DataMemory:DataMemory                                   ; DataMemory          ; work         ;
-;    |JumpAddrOP:JALMODULE|                          ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|JumpAddrOP:JALMODULE                                    ; JumpAddrOP          ; work         ;
-;    |Multiplexer2to1:MUX_JUMPANDLINK|               ; 106 (106)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK                         ; Multiplexer2to1     ; work         ;
-;    |Multiplexer2to1:MUX_RegisterDestinationSelect| ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_RegisterDestinationSelect           ; Multiplexer2to1     ; work         ;
+;    |Adder32bits:PC_offset_adder|                   ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_offset_adder                             ; Adder32bits         ; work         ;
+;    |Control:ControlUnit|                           ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Control:ControlUnit                                     ; Control             ; work         ;
+;    |DataMemory:DataMemory|                         ; 22860 (22860)       ; 32768 (32768)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|DataMemory:DataMemory                                   ; DataMemory          ; work         ;
+;    |Multiplexer2to1:MUX_JUMPADDRESS|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPADDRESS                         ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MUX_JUMPANDLINK|               ; 121 (121)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK                         ; Multiplexer2to1     ; work         ;
 ;    |Multiplexer2to1:MUX_ZeroImmOrReadData|         ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ZeroImmOrReadData                   ; Multiplexer2to1     ; work         ;
+;    |Multiplexer3to1:MUX_MemtoReg|                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer3to1:MUX_MemtoReg                            ; Multiplexer3to1     ; work         ;
+;    |Multiplexer3to1:MUX_RegisterDestinationSelect| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer3to1:MUX_RegisterDestinationSelect           ; Multiplexer3to1     ; work         ;
 ;    |ORGate:BranchEqOrBranchNE|                     ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ORGate:BranchEqOrBranchNE                               ; ORGate              ; work         ;
-;    |PC_Register:PROGRAM_COUNTER|                   ; 28 (28)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER                             ; PC_Register         ; work         ;
-;    |ProgramMemory:Instruction_Memory|              ; 175 (175)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:Instruction_Memory                        ; ProgramMemory       ; work         ;
-;    |RegisterFile:Register_File|                    ; 1347 (0)            ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
-;       |DecoderRegisterFile:Decoder|                ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder  ; DecoderRegisterFile ; work         ;
-;       |MUXRegisterFile:MUXRegister1|               ; 645 (645)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
-;       |MUXRegisterFile:MUXRegister2|               ; 646 (646)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
+;    |PC_Register:PROGRAM_COUNTER|                   ; 26 (26)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER                             ; PC_Register         ; work         ;
+;    |ProgramMemory:Instruction_Memory|              ; 147 (147)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:Instruction_Memory                        ; ProgramMemory       ; work         ;
+;    |RegisterFile:Register_File|                    ; 1352 (0)            ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
+;       |DecoderRegisterFile:Decoder|                ; 54 (54)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder  ; DecoderRegisterFile ; work         ;
+;       |MUXRegisterFile:MUXRegister1|               ; 647 (647)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
+;       |MUXRegisterFile:MUXRegister2|               ; 651 (651)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
 ;       |Register:Register_a0|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a0         ; Register            ; work         ;
 ;       |Register:Register_a1|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a1         ; Register            ; work         ;
 ;       |Register:Register_a2|                       ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a2         ; Register            ; work         ;
@@ -338,15 +342,26 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                           ;
-+---------------------------------------------------------------------+----------------------------------------+
-; Register name                                                       ; Reason for Removal                     ;
-+---------------------------------------------------------------------+----------------------------------------+
-; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in ;
-; PC_Register:PROGRAM_COUNTER|PCValue[0,1]                            ; Lost fanout                            ;
-; Total Number of Removed Registers = 34                              ;                                        ;
-+---------------------------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                       ;
++---------------------------------------------------------------------+----------------------------------------------------+
+; Register name                                                       ; Reason for Removal                                 ;
++---------------------------------------------------------------------+----------------------------------------------------+
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0..31] ; Stuck at GND due to stuck port data_in             ;
+; PC_Register:PROGRAM_COUNTER|PCValue[1]                              ; Merged with PC_Register:PROGRAM_COUNTER|PCValue[0] ;
+; PC_Register:PROGRAM_COUNTER|PCValue[0]                              ; Stuck at GND due to stuck port data_in             ;
+; Total Number of Removed Registers = 34                              ;                                                    ;
++---------------------------------------------------------------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                          ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------+
+; Register name                                                   ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------+
+; RegisterFile:Register_File|Register:Register_Zero|DataOutput[0] ; Stuck at GND              ; PC_Register:PROGRAM_COUNTER|PCValue[0] ;
+;                                                                 ; due to stuck port data_in ;                                        ;
++-----------------------------------------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -356,7 +371,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 33790 ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Synchronous Load   ; 26    ;
 ; Number of registers using Asynchronous Clear ; 1022  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 33760 ;
@@ -369,16 +384,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER|PCValue[4]                        ;
-; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER|PCValue[21]                       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_ZeroImmOrReadData|MUX_Output[30]          ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux24                                 ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux1                                  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[1]                 ;
-; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[8]                 ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[26]                ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2|Mux14 ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1|Mux15 ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |MIPS_Processor|PC_Register:PROGRAM_COUNTER|PCValue[11]                       ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_ZeroImmOrReadData|MUX_Output[18]          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[1]                 ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[14]                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer2to1:MUX_JUMPANDLINK|MUX_Output[24]                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux26                                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |MIPS_Processor|ALU:ArithmeticLogicUnit|Mux10                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer3to1:MUX_MemtoReg|MUX_Output[0]                    ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer3to1:MUX_MemtoReg|MUX_Output[13]                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |MIPS_Processor|Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[1]   ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2|Mux24 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 640 LEs              ; 32 LEs                 ; No         ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1|Mux16 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
@@ -805,7 +822,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_RegisterDestinationSelect ;
+; Parameter Settings for User Entity Instance: Multiplexer3to1:MUX_RegisterDestinationSelect ;
 +----------------+-------+-------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                              ;
 +----------------+-------+-------------------------------------------------------------------+
@@ -866,7 +883,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_MemtoReg ;
+; Parameter Settings for User Entity Instance: Multiplexer3to1:MUX_MemtoReg ;
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
@@ -891,6 +908,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------+
 ; ZeroExtImm ; Output ; Warning  ; Output or bidir port (33 bits) is wider than the port expression (32 bits) it drives; bit(s) "ZeroExtImm[32..32]" have no fanouts ;
 +------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Multiplexer3to1:MUX_RegisterDestinationSelect" ;
++-----------+-------+----------+--------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                    ;
++-----------+-------+----------+--------------------------------------------+
+; MUX_Data2 ; Input ; Info     ; Stuck at VCC                               ;
++-----------+-------+----------+--------------------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -918,6 +944,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; DataInput  ; Input  ; Warning  ; Input port expression (26 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "DataInput[31..26]" will be connected to GND. ;
 ; DataOutput ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (28 bits) it drives; bit(s) "DataOutput[31..28]" have no fanouts                     ;
+; DataOutput ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                   ;
 +------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -939,23 +966,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; boundary_port         ; 74                          ;
 ; cycloneiii_ff         ; 33790                       ;
-;     CLR               ; 2                           ;
-;     CLR SLD           ; 28                          ;
+;     CLR               ; 4                           ;
+;     CLR SLD           ; 26                          ;
 ;     ENA               ; 32768                       ;
 ;     ENA CLR           ; 992                         ;
-; cycloneiii_lcell_comb ; 24887                       ;
-;     arith             ; 118                         ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 81                          ;
-;     normal            ; 24769                       ;
+; cycloneiii_lcell_comb ; 24860                       ;
+;     arith             ; 90                          ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 60                          ;
+;     normal            ; 24770                       ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 49                          ;
-;         3 data inputs ; 1164                        ;
-;         4 data inputs ; 23553                       ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 133                         ;
+;         4 data inputs ; 24584                       ;
 ;                       ;                             ;
 ; Max LUT depth         ; 26.70                       ;
-; Average LUT depth     ; 15.12                       ;
+; Average LUT depth     ; 15.36                       ;
 +-----------------------+-----------------------------+
 
 
@@ -964,7 +991,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:06:08     ;
+; Top            ; 00:06:16     ;
 +----------------+--------------+
 
 
@@ -974,7 +1001,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 24 05:42:51 2018
+    Info: Processing started: Wed Apr 25 11:29:06 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_PROCESSOR -c MIPS_PROCESSOR
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -985,20 +1012,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/c
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
     Info (12023): Found entity 1: ZeroImm File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
-    Info (12023): Found entity 1: MIPS_Processor File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 13
+    Info (12023): Found entity 1: MIPS_Processor File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 7
 Info (12021): Found 0 design units, including 0 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
     Info (12023): Found entity 1: DecoderRegisterFile File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
     Info (12023): Found entity 1: DataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
-    Info (12023): Found entity 1: Control File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v Line: 1
+    Info (12023): Found entity 1: Control File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v
     Info (12023): Found entity 1: ANDGate File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ANDGate.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
-    Info (12023): Found entity 1: ALUControl File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 15
+    Info (12023): Found entity 1: ALUControl File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
-    Info (12023): Found entity 1: ALU File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v Line: 20
+    Info (12023): Found entity 1: ALU File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v
     Info (12023): Found entity 1: Adder32bits File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/SignExtend.v
@@ -1021,94 +1048,171 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/c
     Info (12023): Found entity 1: MIPS_Processor_TB File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v
     Info (12023): Found entity 1: ORGate File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ORGate.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at MIPS_Processor.v(239): created implicit net for "PcSrc_wire" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 239
+Info (12021): Found 1 design units, including 1 entities, in source file /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v
+    Info (12023): Found entity 1: Multiplexer3to1 File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 1
 Info (12127): Elaborating entity "MIPS_Processor" for the top level hierarchy
-Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 112
-Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:PROGRAM_COUNTER" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 123
-Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:Instruction_Memory" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 135
+Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 107
+Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:PROGRAM_COUNTER" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 118
+Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:Instruction_Memory" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 130
 Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (60) in memory file does not match the number of elements in the address range [0:511] File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 34
 Warning (10030): Net "rom.data_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
 Warning (10030): Net "rom.waddr_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
 Warning (10030): Net "rom.we_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v Line: 30
-Info (12128): Elaborating entity "Adder32bits" for hierarchy "Adder32bits:PC_4_adder" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 146
-Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:ShiftLeftADDR" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 164
-Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_JUMPADDRESS" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 177
-Info (12128): Elaborating entity "JumpAddrOP" for hierarchy "JumpAddrOP:JALMODULE" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 186
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Register_File" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 216
+Info (12128): Elaborating entity "Adder32bits" for hierarchy "Adder32bits:PC_4_adder" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 141
+Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:ShiftLeftADDR" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 159
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_JUMPADDRESS" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 171
+Info (12128): Elaborating entity "JumpAddrOP" for hierarchy "JumpAddrOP:JALMODULE" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 180
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Register_File" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 210
 Info (12128): Elaborating entity "DecoderRegisterFile" for hierarchy "RegisterFile:Register_File|DecoderRegisterFile:Decoder" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v Line: 42
 Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_Zero" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v Line: 58
 Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "RegisterFile:Register_File|MUXRegisterFile:MUXRegister1" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/RegisterFile.v Line: 480
-Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_RegisterDestinationSelect" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 230
-Info (12128): Elaborating entity "ANDGate" for hierarchy "ANDGate:BRANCHEQ_AND_ZERO" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 255
-Info (12128): Elaborating entity "ORGate" for hierarchy "ORGate:BranchEqOrBranchNE" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 273
-Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SignExtender" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 281
-Info (12128): Elaborating entity "ZeroImm" for hierarchy "ZeroImm:ZeroImmExtender" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 304
-Info (12128): Elaborating entity "LUIOp" for hierarchy "LUIOp:LUIOPERATION" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 327
-Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ArithmeticLogicUnitControl" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 359
-Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(67): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 67
-Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(68): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 68
-Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(73): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 73
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ArithmeticLogicUnit" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 370
-Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:DataMemory" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 383
+Info (12128): Elaborating entity "Multiplexer3to1" for hierarchy "Multiplexer3to1:MUX_RegisterDestinationSelect" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 225
+Warning (10240): Verilog HDL Always Construct warning at Multiplexer3to1.v(14): inferring latch(es) for variable "MUX_Output", which holds its previous value in one or more paths through the always construct File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 14
+Info (10041): Inferred latch for "MUX_Output[0]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[1]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[2]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[3]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[4]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (12128): Elaborating entity "ANDGate" for hierarchy "ANDGate:BRANCHEQ_AND_ZERO" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 249
+Info (12128): Elaborating entity "ORGate" for hierarchy "ORGate:BranchEqOrBranchNE" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 267
+Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SignExtender" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 276
+Info (12128): Elaborating entity "ZeroImm" for hierarchy "ZeroImm:ZeroImmExtender" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 299
+Info (12128): Elaborating entity "LUIOp" for hierarchy "LUIOp:LUIOPERATION" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 322
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ArithmeticLogicUnitControl" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 354
+Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(63): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 63
+Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(64): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 64
+Warning (10935): Verilog HDL Casex/Casez warning at ALUControl.v(69): casex/casez item expression overlaps with a previous casex/casez item expression File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v Line: 69
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ArithmeticLogicUnit" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 365
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:DataMemory" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 378
+Info (12128): Elaborating entity "Multiplexer3to1" for hierarchy "Multiplexer3to1:MUX_MemtoReg" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 392
+Warning (10240): Verilog HDL Always Construct warning at Multiplexer3to1.v(14): inferring latch(es) for variable "MUX_Output", which holds its previous value in one or more paths through the always construct File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 14
+Info (10041): Inferred latch for "MUX_Output[0]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[1]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[2]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[3]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[4]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[5]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[6]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[7]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[8]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[9]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[10]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[11]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[12]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[13]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[14]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[15]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[16]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[17]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[18]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[19]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[20]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[21]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[22]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[23]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[24]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[25]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[26]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[27]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[28]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[29]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[30]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Info (10041): Inferred latch for "MUX_Output[31]" at Multiplexer3to1.v(18) File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "DataMemory:DataMemory|ram" is uninferred due to asynchronous read logic File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v Line: 26
     Info (276007): RAM logic "RegisterFile:Register_File|DecoderRegisterFile:Decoder|Ram0" is uninferred due to asynchronous read logic File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v Line: 20
+    Info (276007): RAM logic "DataMemory:DataMemory|ram" is uninferred due to asynchronous read logic File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v Line: 26
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Quartus/db/MIPS_PROCESSOR.ram0_ProgramMemory_2090400d.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[0]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[0]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[1]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[2]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[3]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_RegisterDestinationSelect|MUX_Output[4]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[1]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[2]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[3]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[4]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[5]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[6]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[7]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[8]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[9]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[10]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[11]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[12]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[13]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[14]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[15]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[16]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[17]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[18]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[19]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[20]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[21]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[22]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[23]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[24]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[25]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[26]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[27]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[28]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[29]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[30]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
+Warning (14026): LATCH primitive "Multiplexer3to1:MUX_MemtoReg|MUX_Output[31]" is permanently enabled File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v Line: 18
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PortOut[0]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[1]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[2]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[3]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[4]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[5]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[6]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[7]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[8]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[9]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[10]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[11]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[12]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[13]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[14]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[15]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[16]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[17]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[18]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[19]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[20]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[21]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[22]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[23]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[24]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[25]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[26]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[27]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[28]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[29]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[30]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
-    Warning (13410): Pin "PortOut[31]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 26
+    Warning (13410): Pin "PortOut[0]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[1]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[2]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[3]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[4]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[5]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[6]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[7]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[8]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[9]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[10]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[11]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[12]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[13]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[14]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[15]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[16]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[17]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[18]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[19]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[20]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[21]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[22]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[23]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[24]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[25]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[26]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[27]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[28]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[29]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[30]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
+    Warning (13410): Pin "PortOut[31]" is stuck at GND File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "PortIn[0]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[1]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[2]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[3]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[4]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[5]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[6]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-    Warning (15610): No output dependent on input pin "PortIn[7]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 22
-Info (21057): Implemented 58720 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "PortIn[0]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[1]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[2]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[3]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[4]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[5]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[6]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+    Warning (15610): No output dependent on input pin "PortIn[7]" File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v Line: 16
+Info (21057): Implemented 58693 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 58646 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
-    Info: Peak virtual memory: 1184 megabytes
-    Info: Processing ended: Tue Apr 24 05:49:40 2018
-    Info: Elapsed time: 00:06:49
-    Info: Total CPU time (on all processors): 00:07:19
+    Info (21061): Implemented 58619 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 1207 megabytes
+    Info: Processing ended: Wed Apr 25 11:36:01 2018
+    Info: Elapsed time: 00:06:55
+    Info: Total CPU time (on all processors): 00:07:22
 
 
