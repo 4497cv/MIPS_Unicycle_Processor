@@ -9,7 +9,7 @@ z2
 cModel Technology
 d/home/c
 vAdder32bits
-Z0 !s110 1524674220
+Z0 !s110 1524938292
 !i10b 1
 !s100 ]H0^NRAm[`J07LMS2@]Pb2
 IG_baQBdB[Fm_mKT>[?JVF1
@@ -23,7 +23,7 @@ Z4 OV;L;10.5c;63
 r1
 !s85 0
 31
-!s108 1524674219.000000
+!s108 1524938291.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v|
 !i113 1
@@ -33,11 +33,11 @@ n@adder32bits
 vALU
 R0
 !i10b 1
-!s100 Iih0E[Ri`0Pnf67i2RlBf3
-IKzSdieAUkT<z<Wm20B7Md3
+!s100 iQ1cn5ZNNS@cVhS1nQ=2>1
+Ikdn_LGY:6c>z23GDUNRem2
 R1
 R2
-w1524614089
+w1524785433
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 Z7 L0 12
@@ -45,7 +45,7 @@ R4
 r1
 !s85 0
 31
-Z8 !s108 1524674220.000000
+Z8 !s108 1524938292.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v|
 !i113 1
@@ -55,11 +55,11 @@ n@a@l@u
 vALUControl
 R0
 !i10b 1
-!s100 G51JFQHP0B?ID_@3IV?c33
-Io`B5D=^UfN]bU`kG?FNgC3
+!s100 5l8aTkzR:JZ4[iA8KfelV2
+I@TFT=KkRX>7CJ]<0ZGOE61
 R1
 R2
-w1524613974
+w1524786353
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
 L0 11
@@ -99,14 +99,14 @@ n@a@n@d@gate
 vControl
 R0
 !i10b 1
-!s100 UNO_jm71MoRaX<V3N1Qgo1
-I`<;;LmW[7AZHTOJz0dDJC1
+!s100 F:YCMD<h]E`0AJoJ3[`IA0
+I2:KITQEE;CPD1M>iA?<:A0
 R1
 R2
-w1524673587
+w1524938058
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
-L0 27
+L0 39
 R4
 r1
 !s85 0
@@ -121,11 +121,11 @@ n@control
 vDataMemory
 R0
 !i10b 1
-!s100 BkMWI_^YX<9]0cRNC8fR51
-IOF_o3Aiz1A4U^zlYmK<:U3
+!s100 19o1L^inOT`Tb5>BC1Bk`0
+I9d6kbSbe[E6aQPGg1`l[]3
 R1
 R2
-w1524525081
+w1524786044
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 R3
@@ -163,7 +163,7 @@ R5
 R6
 n@decoder@register@file
 vJumpAddrOP
-Z9 !s110 1524674221
+Z9 !s110 1524938293
 !i10b 1
 !s100 dEn@83HB=o_8>_o@`oS6I3
 I_4d6X_PHd:=6S]YdoQD3M1
@@ -177,7 +177,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1524674221.000000
+R8
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v|
 !i113 1
@@ -199,7 +199,7 @@ R4
 r1
 !s85 0
 31
-R10
+Z10 !s108 1524938293.000000
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v|
 !i113 1
@@ -207,13 +207,13 @@ R5
 R6
 n@l@u@i@op
 vMIPS_Processor
-R0
+R9
 !i10b 1
-!s100 n;bMHMdzQ@=n0[AAl`DSo0
-I`[c:HiO:7n`gHZB@ESI9P2
+!s100 FIGI_`[T7M>fPjEZE>7fg1
+I9YkCLZ`S0PeA9>[IM4CZf1
 R1
 R2
-w1524671965
+w1524788199
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 L0 7
@@ -221,7 +221,7 @@ R4
 r1
 !s85 0
 31
-R8
+R10
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v|
 !i113 1
@@ -243,7 +243,7 @@ R4
 r1
 !s85 0
 31
-R8
+R10
 !s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v|
 !i113 1
@@ -275,11 +275,11 @@ n@multiplexer2to1
 vMultiplexer3to1
 R9
 !i10b 1
-!s100 >5<LOT1HX>JL52a2fllGU3
-I5bkIRib;VQ[zUGKD5M=L20
+!s100 m3^8<SReZ@WHZWX_>z=ki1
+I]:dz3I`aU5AVUU<[e02::3
 R1
 R2
-w1524615704
+w1524781873
 8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v
 F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer3to1.v
 L0 1
@@ -294,6 +294,28 @@ R10
 R5
 R6
 n@multiplexer3to1
+vMultiplexer4to1
+R9
+!i10b 1
+!s100 2Bl;:;zO]]AIR4dk>YH<Y3
+IhXjGg44ZPL3Gd464AIDlA2
+R1
+R2
+w1524781876
+8/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer4to1.v
+F/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer4to1.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer4to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer4to1.v|
+!i113 1
+R5
+R6
+n@multiplexer4to1
 vMUXRegisterFile
 R9
 !i10b 1

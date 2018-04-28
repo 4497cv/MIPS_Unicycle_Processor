@@ -6,7 +6,7 @@
 
 	this module executes operations of inputs A and B;
 	if branch is equal, ALU must return zero.
-	
+
 */
 
 module ALU
@@ -18,14 +18,14 @@ module ALU
 	output reg [31:0]ALUResult
 );
 
-localparam AND = 3'b000;
-localparam OR  = 3'b001;
-localparam NOR = 3'b010;
-localparam ADD = 3'b011;
-localparam SUB = 3'b100;
-localparam LUI = 3'b101;
-localparam SSL = 3'b110;
-localparam SRL = 3'b001;
+localparam AND  = 3'b000;
+localparam OR   = 3'b001;
+localparam NOR  = 3'b010;
+localparam ADD  = 3'b011;
+localparam SUB  = 3'b100;
+localparam ZERO = 3'b101;
+localparam SSL  = 3'b110;
+localparam SRL  = 3'b001;
 
    always @ (A or B or ALUOperation)
      begin
@@ -40,8 +40,8 @@ localparam SRL = 3'b001;
 				ALUResult = A | B;
 		  NOR:
 				ALUResult = ~(A | B);
-			LUI:
-				ALUResult = {B[15:0], 16'b0};
+			ZERO:
+				ALUResult = 0;
 
 		/*	SRL:
 				ALUResult = (B >> shamt);

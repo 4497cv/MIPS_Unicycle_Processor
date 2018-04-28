@@ -12,8 +12,8 @@
 
 module DataMemory
 #(
-	parameter DATA_WIDTH=32,
-	parameter MEMORY_DEPTH = 1024
+	parameter DATA_WIDTH= 32,
+	parameter MEMORY_DEPTH = 512
 )
 (
 	input [DATA_WIDTH-1:0] WriteData,
@@ -26,13 +26,16 @@ module DataMemory
 	reg [DATA_WIDTH-1:0] ram[MEMORY_DEPTH-1:0];
 	wire [DATA_WIDTH-1:0] ReadDataAux;
 
+//	assign Address1 = (Address - h'1)/4;
+
 	always @ (posedge clk)
 	begin
 		// Write
 		if (MemWrite)
 			ram[Address] <= WriteData;
 	end
+
 	assign ReadDataAux = ram[Address];
-  	assign ReadData = {DATA_WIDTH{MemRead}}& ReadDataAux;
+  assign ReadData = {DATA_WIDTH{MemRead}}& ReadDataAux;
 
 endmodule
