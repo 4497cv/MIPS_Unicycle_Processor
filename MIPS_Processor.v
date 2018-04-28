@@ -343,7 +343,7 @@ MUX_MemtoReg
 	.Selector(MemtoReg_wire),
 	.MUX_Data0(ALUResult_wire), //Result
 	.MUX_Data1(RDM_wire),       //DataMemory Read
-	.MUX_Data2(JumpAddr_wire),  //Jump Address
+	.MUX_Data2(PC_4_wire),  //Jump Address
 	.MUX_Data3(ImmLUIext_wire), //Immediate LUI op
 
 	.MUX_Output(Writeback_wire) //Write back to Reg

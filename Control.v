@@ -79,7 +79,7 @@ always@(OP) begin
 		I_Type_BEQ:	  ControlValues = 15'bxx_1_0_0_xx_0_00_0_0_100; //BranchEQ; SUB(100) *
 		I_Type_BNE:	  ControlValues = 15'bxx_0_1_0_xx_0_00_0_0_100; //BranchNE; SUB(100) *
 		J_Type_J: 	  ControlValues = 15'bxx_0_0_0_00_0_00_0_1_101; //JumpADDR, Jump; NO-ALU *
-		J_Type_JAL:	  ControlValues = 15'b10_0_0_0_00_0_00_0_1_101; //Jump; JAL(110) *
+		J_Type_JAL:	  ControlValues = 15'b10_0_0_0_10_0_00_1_1_101; //RegDest:ra(10),reg write, memtoreg:pc_4(10), Jump; JAL(110) *
 		default:			ControlValues = 15'bxx_x_x_x_xx_x_xx_x_x_xxx;
 	endcase
 end

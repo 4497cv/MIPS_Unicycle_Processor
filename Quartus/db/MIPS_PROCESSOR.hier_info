@@ -88,15 +88,15 @@ BranchEQ <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 BranchNE <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 MemRead <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 MemtoReg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-MemtoReg[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+MemtoReg[1] <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
 MemWrite <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 ALUSrc[0] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
 ALUSrc[1] <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
-RegWrite <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+RegWrite <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
 Jump <= ControlValues.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[0] <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[1] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
-ALUOp[2] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[0] <= WideOr19.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[1] <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
+ALUOp[2] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS_Processor|PC_Register:PROGRAM_COUNTER
@@ -154,7 +154,7 @@ reset => PCValue[18]~reg0.ACLR
 reset => PCValue[19]~reg0.ACLR
 reset => PCValue[20]~reg0.ACLR
 reset => PCValue[21]~reg0.ACLR
-reset => PCValue[22]~reg0.ACLR
+reset => PCValue[22]~reg0.PRESET
 reset => PCValue[23]~reg0.ACLR
 reset => PCValue[24]~reg0.ACLR
 reset => PCValue[25]~reg0.ACLR
