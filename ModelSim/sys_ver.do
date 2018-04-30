@@ -2,10 +2,11 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -divider PC
 add wave -noupdate -radix hexadecimal /MIPS_Processor_TB/DUV/PROGRAM_COUNTER/NewPC
-add wave -noupdate -radix binary /MIPS_Processor_TB/DUV/PROGRAM_COUNTER/PCValue
+add wave -noupdate -radix hexadecimal /MIPS_Processor_TB/DUV/PROGRAM_COUNTER/PCValue
 add wave -noupdate -divider {ALU CONTROL}
 add wave -noupdate /MIPS_Processor_TB/DUV/ArithmeticLogicUnitControl/ALUOp
 add wave -noupdate /MIPS_Processor_TB/DUV/ArithmeticLogicUnitControl/ALUFunction
+add wave -noupdate -radix hexadecimal /MIPS_Processor_TB/DUV/ControlUnit/OP
 add wave -noupdate -divider ALU
 add wave -noupdate -radix hexadecimal /MIPS_Processor_TB/DUV/ArithmeticLogicUnit/A
 add wave -noupdate -radix hexadecimal /MIPS_Processor_TB/DUV/ArithmeticLogicUnit/B
@@ -31,7 +32,7 @@ add wave -noupdate /MIPS_Processor_TB/DUV/ControlUnit/Jump
 add wave -noupdate -radix binary /MIPS_Processor_TB/DUV/ControlUnit/ALUOp
 add wave -noupdate -radix binary /MIPS_Processor_TB/DUV/ControlUnit/ControlValues
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1 ps} 0}
+WaveRestoreCursors {{Cursor 1} {284 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

@@ -82,26 +82,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	Multiplexer3to1
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module DecoderRegisterFile
+-- Compiling module ZeroImm
 
 Top level modules:
-	DecoderRegisterFile
-
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module DataMemory
-
-Top level modules:
-	DataMemory
-
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module ALUControl
-
-Top level modules:
-	ALUControl
+	ZeroImm
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -110,12 +96,44 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	ShiftLeft2
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DecoderRegisterFile.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module ZeroImm
+-- Compiling module DecoderRegisterFile
 
 Top level modules:
-	ZeroImm
+	DecoderRegisterFile
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v {2 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ALUControl
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(22): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(23): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(24): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(25): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(26): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(27): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(28): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(29): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(30): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(31): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(32): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(33): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(34): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(35): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(36): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALUControl.v(37): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	ALUControl
+
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module DataMemory
+
+Top level modules:
+	DataMemory
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Definitions.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
@@ -134,6 +152,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	MUXRegisterFile
 
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
+-- Compiling module ProgramMemory
+
+Top level modules:
+	ProgramMemory
+
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Multiplexer2to1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
 -- Compiling module Multiplexer2to1
@@ -141,12 +166,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 2
 Top level modules:
 	Multiplexer2to1
 
-} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ProgramMemory.v
+} {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Control.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
--- Compiling module ProgramMemory
+-- Compiling module Control
 
 Top level modules:
-	ProgramMemory
+	Control
 
 } {} {}} /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v {1 {vlog -work work -stats=none /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017

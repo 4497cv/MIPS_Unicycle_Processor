@@ -1,5 +1,5 @@
 Flow report for MIPS_PROCESSOR
-Sat Apr 28 16:29:32 2018
+Sun Apr 29 20:28:41 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr 28 16:29:32 2018       ;
+; Flow Status                        ; Successful - Sun Apr 29 20:28:40 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_PROCESSOR                              ;
 ; Top-level Entity Name              ; MIPS_Processor                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 30,707                                      ;
-;     Total combinational functions  ; 13,395                                      ;
-;     Dedicated logic registers      ; 17,406                                      ;
-; Total registers                    ; 17406                                       ;
+; Total logic elements               ; 16,959                                      ;
+;     Total combinational functions  ; 7,839                                       ;
+;     Dedicated logic registers      ; 9,214                                       ;
+; Total registers                    ; 9214                                        ;
 ; Total pins                         ; 74                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/28/2018 16:26:39 ;
+; Start date & time ; 04/29/2018 20:26:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS_PROCESSOR      ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 246473190765645.152495079912544        ; --            ; --             ; --             ;
+; COMPILER_SIGNATURE_ID               ; 246473190765645.152505161517683        ; --            ; --             ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --             ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --             ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --             ; eda_simulation ;
@@ -97,8 +97,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:48     ; 1.0                     ; 1065 MB             ; 00:03:20                           ;
-; Total                ; 00:02:48     ; --                      ; --                  ; 00:03:20                           ;
+; Analysis & Synthesis ; 00:01:42     ; 1.0                     ; 994 MB              ; 00:02:15                           ;
+; Total                ; 00:01:42     ; --                      ; --                  ; 00:02:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

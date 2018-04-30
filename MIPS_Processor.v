@@ -44,7 +44,7 @@ wire Branch_wire;         //Branch-target data selector
 wire [1:0] ALUSrc_wire;   //Determines ALU's input B
 wire RegWrite_wire;       //Writes on Memory
 wire Jump_wire; 				  //Jump to Address
-wire [2:0] ALUOp_wire;    //ALU OPERATION
+wire [3:0] ALUOp_wire;    //ALU OPERATION
 
 /*Branch Operation*/
 wire BranchTest_1_wire;
@@ -113,9 +113,6 @@ PROGRAM_COUNTER
 
 /*~~~~~~~~~~~INSTRUCTION MEMORY~~~~~~~~~~~~~~~*/
 ProgramMemory
-#(
-	.MEMORY_DEPTH(MEMORY_DEPTH)
-)
 Instruction_Memory
 (
 	.Address(PC_wire),
@@ -310,6 +307,7 @@ ArithmeticLogicUnit
 	.ALUOperation(ALUOperation_wire),
 	.A(ReadData1_wire),
 	.B(ReadData2OrInmmediate_wire),
+	.sh(Instruction_wire[10:6]),
 	.Zero(Zero_wire),
 
 	.ALUResult(ALUResult_wire)
@@ -319,10 +317,6 @@ ArithmeticLogicUnit
 /////////////////////// WRITE BACK //////////////////////
 /*~~~~~~~~~~~~~~~~~~~~~DATA MEMORY~~~~~~~~~~~~~~~~~~~~~*/
 DataMemory
-#(
-	.MEMORY_DEPTH(MEMORY_DEPTH),
-	.DATA_WIDTH(DATA_WIDTH)
-)
 RAMDataMemory
 (
 	.clk(clk),
