@@ -26,15 +26,15 @@
 # 24 compiles, 0 failed with no errors.
 vsim work.MIPS_Processor_TB
 # vsim work.MIPS_Processor_TB 
-# Start time: 20:29:01 on Apr 29,2018
+# Start time: 23:13:24 on Apr 29,2018
 # Loading work.MIPS_Processor_TB
 # Loading work.MIPS_Processor
 # Loading work.Control
 # Loading work.PC_Register
+# Loading work.Multiplexer2to1
 # Loading work.ProgramMemory
 # Loading work.Adder32bits
 # Loading work.ShiftLeft2
-# Loading work.Multiplexer2to1
 # Loading work.JumpAddrOP
 # Loading work.RegisterFile
 # Loading work.DecoderRegisterFile
@@ -53,150 +53,248 @@ vsim work.MIPS_Processor_TB
 # ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
 # ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(143): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(143): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(164): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(270): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(279): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
-# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(320): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
 #    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
 do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/hanoi.do
 run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position 21  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram
-run -all
-# Break key hit
-# Break in Module Adder32bits at /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/Adder32bits.v line 25
-# End time: 20:31:33 on Apr 29,2018, Elapsed time: 0:02:32
+quit -sim
+# End time: 23:13:52 on Apr 29,2018, Elapsed time: 0:00:28
 # Errors: 0, Warnings: 8
+vsim work.MIPS_Processor_TB
+# vsim work.MIPS_Processor_TB 
+# Start time: 23:14:00 on Apr 29,2018
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.PC_Register
+# Loading work.Multiplexer2to1
+# Loading work.ProgramMemory
+# Loading work.Adder32bits
+# Loading work.ShiftLeft2
+# Loading work.JumpAddrOP
+# Loading work.RegisterFile
+# Loading work.DecoderRegisterFile
+# Loading work.Register
+# Loading work.MUXRegisterFile
+# Loading work.Multiplexer3to1
+# Loading work.ANDGate
+# Loading work.ORGate
+# Loading work.SignExtend
+# Loading work.ZeroImm
+# Loading work.LUIOp
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.DataMemory
+# Loading work.Multiplexer4to1
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/sys_ver.do
+run
+run
+add wave -position 12 sim:/MIPS_Processor_TB/DUV/Register_File/*
+restart -f
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+run
+restart -f
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+run
+quit -sim
+# End time: 23:18:16 on Apr 29,2018, Elapsed time: 0:04:16
+# Errors: 0, Warnings: 24
+vsim work.MIPS_Processor_TB
+# vsim work.MIPS_Processor_TB 
+# Start time: 23:18:25 on Apr 29,2018
+# Loading work.MIPS_Processor_TB
+# Loading work.MIPS_Processor
+# Loading work.Control
+# Loading work.PC_Register
+# Loading work.Multiplexer2to1
+# Loading work.ProgramMemory
+# Loading work.Adder32bits
+# Loading work.ShiftLeft2
+# Loading work.JumpAddrOP
+# Loading work.RegisterFile
+# Loading work.DecoderRegisterFile
+# Loading work.Register
+# Loading work.MUXRegisterFile
+# Loading work.Multiplexer3to1
+# Loading work.ANDGate
+# Loading work.ORGate
+# Loading work.SignExtend
+# Loading work.ZeroImm
+# Loading work.LUIOp
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.DataMemory
+# Loading work.Multiplexer4to1
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+do /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/hanoi.do
+run
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[24]
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[28]
+add wave -position end  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[40]
+add wave -position 12  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[44]
+add wave -position 12  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[48]
+restart -f
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+run
+add wave -position end  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+run
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[32]
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[36]
+add wave -position 8  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[40]
+add wave -position end  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[64]
+add wave -position 12  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[68]
+add wave -position 12  sim:/MIPS_Processor_TB/DUV/RAMDataMemory/ram[72]
+restart -f
+# ** Warning: (vsim-3017) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v
+# ** Warning: (vsim-3722) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor_TB.v(24): [TFMPC] - Missing connection for port 'PortIn'.
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (26) for port 'DataInput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(161): [PCDPC] - Port size (32) does not match connection size (28) for port 'DataOutput'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ShiftLeftADDR File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ShiftLeft2.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(182): [PCDPC] - Port size (33) does not match connection size (32) for port 'JumpAddr'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/JALMODULE File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/JumpAddrOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(288): [PCDPC] - Port size (33) does not match connection size (32) for port 'ZeroExtImm'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/ZeroImmExtender File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ZeroImm.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(297): [PCDPC] - Port size (33) does not match connection size (32) for port 'ImmLUI'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/LUIOPERATION File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/LUIOp.v
+# ** Warning: (vsim-3015) /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/MIPS_Processor.v(338): [PCDPC] - Port size (8) does not match connection size (32) for port 'Address'. The port definition is at: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /MIPS_Processor_TB/DUV/RAMDataMemory File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/DataMemory.v
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/hanoi.do
+# Compile of Adder32bits.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful with warnings.
+# Compile of ANDGate.v was successful.
+# Compile of Control.v was successful.
+# Compile of DataMemory.v was successful.
+# Compile of DecoderRegisterFile.v was successful.
+# Compile of Definitions.v was successful.
+# Compile of JumpAddrOp.v was successful.
+# Compile of LUIOp.v was successful.
+# Compile of MIPS_Processor.v was successful.
+# Compile of MIPS_Processor_TB.v was successful.
+# Compile of Multiplexer2to1.v was successful.
+# Compile of Multiplexer3to1.v was successful.
+# Compile of Multiplexer4to1.v was successful.
+# Compile of MUXRegisterFile.v was successful.
+# Compile of ORGate.v was successful.
+# Compile of PC_Register.v was successful.
+# Compile of ProgramMemory.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of ShiftLeft2.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of ZeroImm.v was successful.
+# 24 compiles, 0 failed with no errors.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ModelSim/hanoi.do
+run
+run
+run
+run
+run
+# End time: 23:32:34 on Apr 29,2018, Elapsed time: 0:14:09
+# Errors: 0, Warnings: 32

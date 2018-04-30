@@ -13,7 +13,7 @@ module ALUControl
 	input [3:0] ALUOp,
 	input [5:0] ALUFunction,
 
-	output [2:0] ALUOperation
+	output [3:0] ALUOperation
 );
 
 //add, addi,sub, or, ori, and, andi, lui, nor, sll, srl, lw, sw, beq, bne, j, jal, jr
@@ -36,7 +36,7 @@ localparam I_Type_BNE    = 9'b0100_xxxxxx;  //if(R[rs]!=R[rt]): PC=PC+4+BranchAd
 localparam J_Type_JAL    = 9'b0101_xxxxxx;  //R[31]=PC+8;PC=JumpAddr
 localparam J_Type_J      = 9'b0101_xxxxxx;
 
-reg [2:0] ALUControlValues;
+reg [3:0] ALUControlValues;
 wire [9:0] Selector;
 
 assign Selector = {ALUOp, ALUFunction};
@@ -62,6 +62,7 @@ always@(Selector)begin
 		R_Type_ADD:    ALUControlValues = 4'b0011; //add
 	  R_Type_SLL:		 ALUControlValues = 4'b1000;
     R_Type_SRL:    ALUControlValues = 4'b0111;
+		R_Type_JR:     ALUControlValues = 4'b1001;
 		I_Type_SW:     ALUControlValues = 4'b0011;
 		I_Type_ANDI:   ALUControlValues = 4'b0000; //and
 		I_Type_LW:  	 ALUControlValues = 4'b0011;

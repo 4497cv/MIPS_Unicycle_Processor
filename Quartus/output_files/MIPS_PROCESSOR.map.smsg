@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at ALU.v(18): object "Zero" differs only in case from object "ZERO" in the same scope File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v Line: 18
+Info (10281): Verilog HDL Declaration information at ALU.v(19): object "Zero" differs only in case from object "ZERO" in the same scope File: /home/c/Documents/GIT/P2_UNICYCLEPROCESSOR/ALU.v Line: 19

@@ -11,10 +11,11 @@
 
 module ALU
 (
-	input [2:0] ALUOperation,
+	input [3:0] ALUOperation,
 	input [31:0] A,
 	input [31:0] B,
 	input [4:0] sh,
+	output reg JR,
 	output reg Zero,
 	output reg [31:0]ALUResult
 );
@@ -50,8 +51,11 @@ localparam SRL  = 4'b0111;
 		default:
 			ALUResult= 0;
 		endcase // case(control)
-		Zero = (ALUResult==0) ? 1'b1 : 1'b0;
 
-     end // always @ (A or B or control)
-		 
+		JR   = (ALUOperation == 4'b1001) ? 1'b1 : 1'b0;
+
+		Zero = (ALUResult == 0) ? 1'b1 : 1'b0;
+
+    end // always @ (A or B or control)
+
 endmodule

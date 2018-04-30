@@ -22,7 +22,7 @@ module DataMemory
 );
 
 	// Declare the RAM variable
-	reg [DATA_WIDTH-1:0] ram[255:0];
+	 reg [DATA_WIDTH-1:0] ram[255:0];
 	wire [DATA_WIDTH-1:0] ReadDataAux;
 
 	always @ (posedge clk)

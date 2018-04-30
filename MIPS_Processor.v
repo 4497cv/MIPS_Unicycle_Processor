@@ -46,12 +46,14 @@ wire RegWrite_wire;       //Writes on Memory
 wire Jump_wire; 				  //Jump to Address
 wire [3:0] ALUOp_wire;    //ALU OPERATION
 
+wire jr_wire;
+
 /*Branch Operation*/
 wire BranchTest_1_wire;
 wire BranchTest_2_wire;
 
 /*ARITHMETIC LOGIC UNIT WIRES */
-wire [2:0] ALUOperation_wire;
+wire [3:0] ALUOperation_wire;
 wire [31:0] ALUResult_wire;
 wire [31:0] slltoalu_wire;
 wire Zero_wire;
@@ -80,6 +82,8 @@ integer ALUStatus;
 wire [27:0] JumpAddress_wire;
 wire [31:0] JumpAddr_wire;
 wire [31:0] LuitoJal_wire;
+wire [31:0] PCJR_wire;
+
 /////////////////////////////////////////////////
 ///////////////////////FETCH/////////////////////
 /*~~~~~~~~~~~~~~~~CONTROL UNIT~~~~~~~~~~~~~~~~*/
@@ -106,9 +110,23 @@ PROGRAM_COUNTER
 (
 	.clk(clk),
 	.reset(reset),
-	.NewPC(JumpAddressPC_wire),
+	.NewPC(PCJR_wire),
 
 	.PCValue(PC_wire)
+);
+
+/*~~~~~~~~~~~~~~~~~PC/JAL MUX~~~~~~~~~~~~~~~~~*/
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_PCSELJR
+(
+	.Selector(jr_wire),
+	.MUX_Data0(JumpAddressPC_wire),
+	.MUX_Data1(ReadData1_wire),
+
+	.MUX_Output(PCJR_wire)
 );
 
 /*~~~~~~~~~~~INSTRUCTION MEMORY~~~~~~~~~~~~~~~*/
@@ -309,7 +327,7 @@ ArithmeticLogicUnit
 	.B(ReadData2OrInmmediate_wire),
 	.sh(Instruction_wire[10:6]),
 	.Zero(Zero_wire),
-
+	.JR(jr_wire),
 	.ALUResult(ALUResult_wire)
 );
 
